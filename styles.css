@@ -145,3 +145,25 @@ body {
 .section-bg-soft {
     background-color: #F9FBF8;
 }
+
+.carousel-container {
+    position: relative;
+    display: flex;
+
+   }
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.track {
+    display: flex;
+}
+.track img {
+    flex: 0 0 100%;
+    height: 500px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-right: 10px;
+}
