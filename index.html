@@ -30,7 +30,7 @@
                 <a href="#community" class="hover:text-[#E8B923] transition">Community</a>
             </div>
             <div class="flex gap-3">
-                <a href="#" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#1A5A4C] transition">Join Network</a>
+                <a href="#" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Network</a>
                 <button id="mobileMenuBtn" class="block md:hidden text-2xl text-[#0F4C3F]">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -45,15 +45,18 @@
     </nav>
 
     <!--  HERO SECTION  -->
-    <section class="hero-bg min-h-[90vh] flex items-center pt-24 md:pt-32 relative overflow-hidden">
-        <div class="container mx-auto px-5 md:px-10 py-12 md:py-20 relative z-10">
+    <section class="hero-bg min-h-[90vh] flex items-center pt-14 md:pt-22 relative overflow-hidden">
+            <div class="container mx-auto px-5 md:px-10 py-12 md:py-20 relative z-10">
+                <div class="flex justify-center mb-8">
+                <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-28 h-28 object-contain rounded-md">
+            </div>
             <div class="max-w-4xl mx-auto text-center text-white">
                 <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 text-sm font-medium">
                     <i class="fas fa-seedling text-[#E8B923]"></i>
                     <span>Empowering Africa's next generation</span>
                 </div>
                 <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-up">
-                    Transforming Lives & <br> <span class="text-[#E8B923]">Inspiring Excellence</span>
+                    Transforming Lives & <br> <span class="text-[#E8B923]" style="font-size: 25pt;">Inspiring </span> <span class="text-[#E8B923]" id="changing-word" style="font-size: 25pt;">Academic Excellence</span>
                 </h1>
                 <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mt-6 animate-fade-up stagger-item" style="animation-delay: 0.1s;">
                     Learner tracking · Career guidance · TaRL · Mentorship · Economic empowerment for parents
@@ -64,7 +67,6 @@
                 </div>
             </div>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
     </section>
 
     <!--  MISSION SECTION  -->
@@ -75,7 +77,7 @@
                     <span class="text-[#E8B923] font-semibold tracking-wide text-sm uppercase flex items-center gap-2"><i class="fas fa-bullseye"></i> Our purpose</span>
                     <h2 class="heading-font text-3xl md:text-4xl font-bold mt-3 text-gray-800">Empowering learners,<br> strengthening families</h2>
                     <div class="w-20 h-1 bg-[#E8B923] mt-5 mb-6"></div>
-                    <p class="text-gray-600 leading-relaxed text-lg">ALTRIN's mission is to transform lives by targeting primary & secondary learners, undergraduates, and fresh graduates through innovative projects like Learner Tracking Systems, Teaching at the Right Level (TaRL), career guidance, mentorship, and parent economic empowerment programs.</p>
+                    <p class="text-black-600 leading-relaxed text-lg">ALTRIN's mission is to transform lives by targeting primary & secondary learners, undergraduates, and fresh graduates through innovative projects like Learner Tracking Systems, Teaching at the Right Level (TaRL), career guidance, mentorship, and parent economic empowerment programs.</p>
                     <div class="grid grid-cols-2 gap-5 mt-8">
                         <div class="border-l-4 border-[#0F4C3F] pl-4"><span class="text-3xl font-bold text-[#0F4C3F]">10K+</span><p class="text-gray-500">Learners impacted</p></div>
                         <div class="border-l-4 border-[#E8B923] pl-4"><span class="text-3xl font-bold text-[#E8B923]">32+</span><p class="text-gray-500">Schools & communities</p></div>
@@ -93,6 +95,62 @@
             </div>
         </div>
     </section>
+
+    <!-- PROFESSIONAL TREE PLANTING ANIMATION -->
+<div class="tree-bucket-animation py-16 bg-[#F9FBF8] border-t border-b border-gray-100">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="max-w-md mx-auto text-center mb-10">
+            <span class="inline-flex items-center gap-2 text-[#0F4C3F] font-medium text-sm tracking-widest uppercase mb-3">
+                <i class="fas fa-seedling"></i>
+                INTERACTIVE MOMENT
+            </span>
+            <h3 class="heading-font text-3xl font-bold text-gray-800 mb-2">Plant a Tree, Grow a Future</h3>
+            <p class="text-gray-600">Drag the tree into the bucket to symbolize our commitment to nurturing young minds and sustainable growth in Buliisa District.</p>
+        </div>
+
+        <div class="animation-container flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
+            
+            <!-- Draggable Tree -->
+            <div class="tree-wrapper flex flex-col items-center">
+                <div id="draggableTree" class="tree text-8xl md:text-[10rem] transition-all duration-300 select-none">
+                    🌳
+                </div>
+                <p class="text-xs text-gray-500 mt-4 font-medium tracking-widest">DRAG ME</p>
+            </div>
+
+            <!-- Bucket Target -->
+            <div id="bucketTarget" class="bucket-wrapper flex flex-col items-center">
+                <div class="relative">
+                    <div id="bucket" class="bucket text-8xl md:text-[9rem] transition-all duration-300">
+                        🪣
+                    </div>
+                    <div id="splash" class="splash-effect text-6xl absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 transition-all">
+                        💧
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-6 font-medium">DROP HERE</p>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message hidden mt-12 mx-auto max-w-sm">
+            <div class="flex items-center justify-center gap-3 bg-gradient-to-r from-[#0F4C3F] to-[#1A5A4C] text-white px-8 py-6 rounded-3xl shadow-xl">
+                <span class="text-4xl">🌟</span>
+                <div>
+                    <p class="font-semibold text-xl">Well done! A tree has been planted.</p>
+                    <p class="text-sm text-white/80 mt-1">Every small action grows into lasting impact.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-8">
+            <button id="resetBtn" 
+                    class="hidden px-6 py-2.5 bg-white border border-gray-300 hover:border-[#E8B923] text-gray-700 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-md">
+                🌱 Plant Another Tree
+            </button>
+        </div>
+    </div>
+</div>
 
     <!--  PROGRAMS GRID  -->
     <section id="programs" class="py-20 md:py-28 section-bg-soft">
@@ -149,6 +207,7 @@
                     <div class="w-12 h-12 rounded-full bg-[#0F4C3F]/10 flex items-center justify-center mb-4"><i class="fas fa-chart-line text-2xl text-[#0F4C3F]"></i></div>
                     <h3 class="text-xl font-bold text-gray-800">Learner Tracking Systems</h3>
                     <p class="text-gray-500 text-sm mt-1">P.1 enrolment → university graduation</p>
+                    <p class="text-gray-600 mt-3">Aims at tracking learners' progress from P.1 enrolment through to university graduation. The goal is to minimize school dropout rates and improve graduation rates.</p>
                     <p class="text-gray-600 mt-3">Minimize school dropout rates and improve graduation rates by tracking academic progress, attendance, and at-risk indicators across key transition years.</p>
                 </div>
                 <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
@@ -214,7 +273,7 @@
         <div class="container mx-auto px-5 md:px-10 text-center">
             <div class="max-w-3xl mx-auto">
                 <i class="fas fa-hand-holding-heart text-4xl text-[#E8B923] mb-3"></i>
-                <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-800">Strengthening Families, Securing Futures</h2>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-800" style="color: #ff6a00;">Strengthening Families, Securing Futures</h2>
                 <p class="text-gray-600 mt-4 text-lg">We empower economic sustainability of parents through projects that strengthen financial capacities to meet educational needs for their children. From VSLA groups to small business incubation, ALTRIN works alongside parents.</p>
                 <div class="flex flex-wrap justify-center gap-4 mt-8">
                     <div class="bg-white rounded-full px-6 py-2 shadow-sm flex items-center gap-2"><i class="fas fa-chart-line text-[#0F4C3F]"></i> Financial literacy</div>
@@ -233,7 +292,7 @@
                     <i class="fas fa-calendar-alt text-[#E8B923]"></i>
                     <span class="text-sm font-medium">Join Our Online Community Network</span>
                 </div>
-                <h2 class="heading-font text-4xl md:text-5xl font-bold text-gray-800">Fortnightly on Tuesdays</h2>
+                <h2 class="heading-font text-4xl md:text-5xl font-bold text-gray-800" style="color: #ff6a00;">Fortnightly on Tuesdays</h2>
                 <p class="text-gray-500 text-lg mt-4">Live sessions, expert talks, peer support & networking. Open to students, graduates, parents & educators.</p>
                 <div class="mt-8 flex flex-wrap justify-center gap-6">
                     <a href="#" class="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-youtube text-2xl text-red-500"></i> YouTube</a>
@@ -244,6 +303,61 @@
             </div>
         </div>
     </section>
+    <section class="altrin-team" class="py-16 section-bg-soft">
+        <div class="container mx-auto px-5 md:px-10 text-center">
+            <div class="max-w-3xl mx-auto">
+      <h3 class="text-3xl md:text-4xl font-bold text-#ff6a00-800" style="color: #ff6a00;">ALTRIN 2026/2027</h3><br>
+      <h2 class="heading-font text-2xl md:text-3xl text-gray-800">Unveiling the Team</h2><br>
+      <p class="subtitle">
+        Serving with ALTRIN is an opportunity to voluntarily participate in a community transformation effort<br>
+        towards inspiring academic and professional excellence in Buliisa District and Uganda at large.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      <!-- Aggrey Muhumuza -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="./Resources/IMG-20260402-WA0011.jpg" alt="Aggrey Muhumuza">
+        </div>
+        <div class="card-content">
+          <h3>Aggrey Muhumuza</h3>
+          <p class="role">Resource Mobilization</p>
+          <p class="quote">"I am proud to be part of it."</p>
+          <p class="bio">
+            Focused on securing funding and in-kind support to sustain ALTRIN’s
+            learner tracking systems, TaRL, career guidance, and mentorship programs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rogers Byensi -->
+      <div class="team-card">
+        <div class="card-image">
+          <img src="./Resources/IMG-20260404-WA0000.jpg" alt="Rogers Byensi">
+        </div>
+        <div class="card-content">
+          <h3>Rogers Byensi</h3>
+          <p class="role">Partnership & Resource Mobilization Lead</p>
+          <p class="quote">"Building alliances that last."</p>
+          <p class="bio">
+            Leads strategic partnerships and resource mobilization to drive
+            academic excellence for primary earners, students, undergraduates, and fresh graduates.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-footer">
+      <p>
+        ALTRIN’s mission transforms lives through <strong>learner tracking systems</strong>,
+        <strong>Teaching at the Right Level (TaRL)</strong>, <strong>career guidance</strong>,
+        <strong>mentorship programs</strong>, and other academic & co-curricular activities.
+      </p>
+      <div class="signature">Albertine Transformation Initiative</div>
+    </div>
+  </div>
+</section>
 
     <!--  FOOTER  -->
     <footer class="bg-[#0A2E26] text-white py-12">
@@ -251,7 +365,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <div class="w-8 h-8 bg-[#E8B923] rounded-md flex items-center justify-center font-bold text-[#0F4C3F]">A</div>
+                        <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-12 h-12 object-contain rounded-md">
                         <span class="heading-font text-xl font-bold">ALTRIN</span>
                     </div>
                     <p class="text-white/60 text-sm">Transforming lives through learner tracking, career guidance, TaRL, mentorship & parent economic empowerment.</p>
@@ -288,38 +402,305 @@
 
     <script>
         (function() {
-            const mobileBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document document.getElementById('mobileMenu');
-            if(mobileBtn && mobileMenu) {
-                mobileBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navbar = document.getElementById('navbar');
+
+        if (!mobileBtn || !mobileMenu) {
+            console.warn("Mobile menu elements not found");
+            return;
+        }
+
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+                mobileBtn.style.transform = 'rotate(90deg)';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                mobileBtn.style.transform = 'rotate(0deg)';
             }
-            const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', () => {
-                if(window.scrollY > 30) {
-                    navbar.classList.add('nav-scrolled', 'shadow-md');
-                } else {
-                    navbar.classList.remove('nav-scrolled', 'shadow-md');
+        }
+
+        // Click on hamburger button
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();        // Prevent conflicts
+            toggleMenu();
+        });
+
+        // Auto close when clicking any menu link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
                 }
             });
-            const staggerItems = document.querySelectorAll('.stagger-item');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateX(0) translateY(0)';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.2 });
-            staggerItems.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateX(0px) translateY(15px)';
-                observer.observe(el);
-            });
-        })();
+        });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && 
+                !mobileMenu.contains(e.target) && 
+                !mobileBtn.contains(e.target)) {
+                toggleMenu();
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                navbar.classList.add('nav-scrolled', 'shadow-md');
+            } else {
+                navbar.classList.remove('nav-scrolled', 'shadow-md');
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && isMenuOpen) {
+                toggleMenu();
+            }
+        });
+
+        // Initial state
+        mobileBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+
+    })();
+        (function() {
+        // Typewriter effect for changing word
+        const words = ["Academic Excellence", "Professional Excellence"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const element = document.getElementById('changing-word');
+        let speed = 100; // milliseconds per character
+        
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                // Delete characters
+                element.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                speed = 50; // Faster when deleting
+            } else {
+                // Add characters
+                element.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                speed = 100; // Normal speed when typing
+            }
+            
+            // When done typing a word
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                speed = 1500; // Pause at the end (1.5 seconds)
+            }
+            
+            // When done deleting
+            if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length; // Move to next word
+                speed = 500; // Pause before typing next word
+            }
+            
+            setTimeout(typeEffect, speed);
+        }
+        
+        // Start the effect
+        typeEffect();
+    })();
+
+// SIMPLIFIED & FIXED Tree Planting Animation
+// Mobile: Drag anywhere → Release = Success
+// Desktop: Normal drag & drop on bucket
+
+(function() {
+    const tree = document.getElementById('draggableTree');
+    const bucketTarget = document.getElementById('bucketTarget');
+    const successMsg = document.getElementById('successMessage');
+    const resetBtn = document.getElementById('resetBtn');
+    const splash = document.getElementById('splash');
+    const bucketEmoji = document.getElementById('bucket');
+
+    let hasPlanted = false;
+    let isDragging = false;
+    let originalRect = null;
+
+    if (!tree || !bucketTarget) return;
+
+    function saveOriginalPosition() {
+        originalRect = tree.getBoundingClientRect();
+    }
+
+    function resetTreePosition() {
+        if (!originalRect) return;
+        tree.style.transition = 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        tree.style.left = `${originalRect.left}px`;
+        tree.style.top = `${originalRect.top}px`;
+
+        setTimeout(() => {
+            tree.style.position = '';
+            tree.style.left = '';
+            tree.style.top = '';
+            tree.style.zIndex = '';
+            tree.style.opacity = '1';
+            tree.style.transform = 'scale(1)';
+        }, 480);
+    }
+
+    // ====================== DESKTOP DRAG & DROP ======================
+    tree.setAttribute('draggable', 'true');
+
+    tree.addEventListener('dragstart', (e) => {
+        if (hasPlanted) return;
+        saveOriginalPosition();
+        tree.classList.add('dragging');
+        e.dataTransfer.setData('text/plain', 'tree');
+    });
+
+    tree.addEventListener('dragend', () => tree.classList.remove('dragging'));
+
+    bucketTarget.addEventListener('dragover', (e) => {
+        if (hasPlanted) return;
+        e.preventDefault();
+        bucketTarget.classList.add('drag-over');
+    });
+
+    bucketTarget.addEventListener('dragleave', () => {
+        bucketTarget.classList.remove('drag-over');
+    });
+
+    bucketTarget.addEventListener('drop', (e) => {
+        e.preventDefault();
+        bucketTarget.classList.remove('drag-over');
+        if (!hasPlanted) handleSuccessfulPlant();
+    });
+
+    // ====================== MOBILE TOUCH - SIMPLE RELEASE = SUCCESS ======================
+    tree.addEventListener('touchstart', (e) => {
+        if (hasPlanted) return;
+        
+        isDragging = true;
+        saveOriginalPosition();
+
+        const touch = e.touches[0];
+        tree.style.transition = 'none';
+        tree.style.position = 'fixed';
+        tree.style.left = `${touch.clientX - 40}px`;   // center roughly on finger
+        tree.style.top = `${touch.clientY - 40}px`;
+        tree.style.zIndex = '1000';
+        tree.classList.add('dragging');
+
+        e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+
+        const touch = e.touches[0];
+        tree.style.left = `${touch.clientX - 40}px`;
+        tree.style.top = `${touch.clientY - 40}px`;
+    }, { passive: false });
+
+    // KEY CHANGE: On touchend (release), always trigger success on mobile
+    document.addEventListener('touchend', (e) => {
+        if (!isDragging || hasPlanted) return;
+
+        isDragging = false;
+        tree.classList.remove('dragging');
+
+        // Trigger success immediately when user releases finger
+        handleSuccessfulPlant();
+    });
+
+    // ====================== SUCCESS ANIMATION ======================
+    function handleSuccessfulPlant() {
+        hasPlanted = true;
+
+        // Hide tree with nice animation
+        tree.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        tree.style.opacity = '0';
+        tree.style.transform = 'scale(0.6) translateY(50px)';
+
+        // Show splash effect
+        splash.classList.add('active');
+
+        // Show success message + reset button
+        successMsg.classList.remove('hidden');
+        resetBtn.classList.remove('hidden');
+
+        // Celebration leaves burst
+        createCelebrationBurst();
+
+        // Bucket bounce
+        bucketEmoji.style.transition = 'transform 0.6s ease';
+        bucketEmoji.style.transform = 'scale(1.2) rotate(15deg)';
+        setTimeout(() => {
+            bucketEmoji.style.transform = 'scale(1) rotate(0deg)';
+        }, 600);
+    }
+
+    // ====================== CELEBRATION LEAVES BURST ======================
+    function createCelebrationBurst() {
+        const rect = bucketTarget.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2 - 30;
+
+        const leafEmojis = ['🍃', '🌿', '🍀', '🟢', '🌱'];
+
+        for (let i = 0; i < 52; i++) {
+            setTimeout(() => {
+                const leaf = document.createElement('div');
+                leaf.className = 'celebration-leaf';
+                leaf.textContent = leafEmojis[Math.floor(Math.random() * leafEmojis.length)];
+
+                leaf.style.left = `${centerX + (Math.random() - 0.5) * 80}px`;
+                leaf.style.top = `${centerY}px`;
+                leaf.style.fontSize = `${Math.random() * 24 + 18}px`;
+                leaf.style.position = 'fixed';
+                leaf.style.zIndex = '1000';
+                leaf.style.pointerEvents = 'none';
+
+                document.body.appendChild(leaf);
+
+                const angle = Math.random() * 360;
+                const distance = Math.random() * 165 + 135;
+                const moveX = Math.cos(angle * Math.PI / 180) * distance;
+                const moveY = Math.sin(angle * Math.PI / 180) * distance - (Math.random() * 90 + 80);
+
+                leaf.animate([
+                    { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+                    { transform: `translate(${moveX*0.6}px, ${moveY*0.6}px) rotate(${angle*2}deg)`, opacity: 1 },
+                    { transform: `translate(${moveX}px, ${moveY + 270}px) rotate(${angle*8}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 1600 + 2300,
+                    easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+                });
+
+
+                setTimeout(() => leaf.remove(), 4500);
+            }, i * 6);
+        }
+    }
+
+    // Reset button
+    resetBtn.addEventListener('click', () => {
+        hasPlanted = false;
+        isDragging = false;
+        resetTreePosition();
+        splash.classList.remove('active');
+        successMsg.classList.add('hidden');
+        resetBtn.classList.add('hidden');
+    });
+
+})();
     </script>
 </body>
 </html>
