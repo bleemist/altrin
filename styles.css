@@ -25,7 +25,7 @@ body {
 }
 
 .hero-bg {
-    background: linear-gradient(125deg, #0F4C3F 0%, #1A5A4C 55%, #0F4C3F 100%);
+    background: linear-gradient(125deg, #03211a 0%, #0d614f 55%, #03211a 100%);
     position: relative;
     isolation: isolate;
 }
@@ -34,7 +34,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 20% 40%, rgba(232,185,35,0.08) 0%, transparent 60%);
+    background: radial-gradient(circle at 20% 40%, #053429a3 0%, transparent 80%);
     pointer-events: none;
 }
 
@@ -64,19 +64,19 @@ body {
 }
 
 .animate-fade-up {
-    animation: fadeUp 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    animation: fadeUp 2s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
 }
 
 .animate-scale-in {
-    animation: scaleIn 0.7s ease-out forwards;
+    animation: scaleIn 1.4s ease-out forwards;
 }
 
 .animate-slide-left {
-    animation: slideInLeft 0.7s ease forwards;
+    animation: slideInLeft 1.4s ease forwards;
 }
 
 .animate-slide-right {
-    animation: slideInRight 0.7s ease forwards;
+    animation: slideInRight 1.4s ease forwards;
 }
 
 .float-element {
@@ -105,7 +105,7 @@ body {
 }
 
 .card-lift {
-    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    transition: all 1.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 .card-lift:hover {
@@ -144,4 +144,236 @@ body {
 }
 .section-bg-soft {
     background-color: #F9FBF8;
+}
+
+/* Team Grid */
+.team-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+margin: 0;
+padding: 2rem;
+}
+
+/* Individual Card */
+.team-card {
+background: #0A2E26;
+backdrop-filter: blur(12px);
+border-radius: 1rem;
+overflow: hidden;
+box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 255, 136, 0.1);
+transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+flex: 1;
+min-width: 280px;
+max-width: 500px;
+border: 1px solid rgba(0, 255, 136, 0.15);
+}
+
+.team-card:hover {
+transform: translateY(-8px) scale(1.01);
+box-shadow: 0 35px 55px -15px rgba(0, 255, 136, 0.25), 0 0 0 1px rgba(0, 255, 136, 0.4);
+background: #092a23;
+border-color: rgba(0, 255, 136, 0.4);
+}
+
+/* Card Image Wrapper */
+.card-image {
+width: 100%;
+background: linear-gradient(135deg, #d06903, #0a0f08);
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+position: relative;
+}
+
+.card-image::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 2px;
+background: linear-gradient(90deg, transparent, #ff8c00, #ff6a00, transparent);
+}
+
+.card-image img {
+width: 100%;
+height: auto;
+object-fit: cover;
+display: block;
+filter: brightness(0.95) contrast(1.05);
+transition: filter 0.3s ease;
+}
+
+.team-card:hover .card-image img {
+filter: brightness(1.02) contrast(1.08);
+}
+
+/* Card Content */
+.card-content {
+padding: 2rem;
+}
+
+.card-content h3 {
+font-size: 1.7rem;
+font-weight: 600;
+margin: 0 0 0.3rem;
+background: linear-gradient(135deg, #ff9500, #e0e6e2);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+letter-spacing: -0.3px;
+}
+
+.role {
+font-size: 0.75rem;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #ffffffcf;
+margin-bottom: 1rem;
+opacity: 0.9;
+font-family: 'Inter', monospace;
+}
+
+.quote {
+font-style: normal;
+color: rgba(255, 255, 255, 0.799);
+font-size: 0.85rem;
+border-left: 2px solid #ff9500;
+padding-left: 0.9rem;
+margin: 1rem 0;
+font-weight: 400;
+letter-spacing: -0.2px;
+}
+
+.bio {
+color: rgb(255, 255, 255);
+font-size: 0.9rem;
+line-height: 1.6;
+margin-top: 1rem;
+font-weight: 400;
+}
+
+/* Subtle pulse animation on cards */
+@keyframes subtlePulse {
+0% { border-color: rgba(0, 255, 136, 0.1); }
+100% { border-color: rgba(0, 255, 136, 0.2); }
+}
+
+.team-card {
+animation: subtlePulse 3s infinite alternate;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.team-grid {
+padding: 1rem;
+gap: 1.5rem;
+}
+.card-content h3 {
+font-size: 1.4rem;
+}
+.card-content {
+padding: 1.5rem;
+}
+}
+/* PROFESSIONAL TREE PLANTING ANIMATION */
+.tree-bucket-animation {
+    position: relative;
+}
+
+.animation-container {
+    min-height: 280px;
+}
+
+.tree {
+    font-size: 9rem;
+    cursor: grab;
+    user-select: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 10px 15px rgba(15, 76, 63, 0.15));
+}
+
+.tree:active {
+    cursor: grabbing;
+    transform: scale(1.08) rotate(8deg);
+}
+
+.tree.dragging {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.bucket-wrapper {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bucket-wrapper.drag-over {
+    transform: scale(1.15) translateY(-8px);
+    filter: drop-shadow(0 0 25px rgba(232, 185, 35, 0.6));
+}
+
+.bucket {
+    font-size: 8.5rem;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 15px 20px rgba(15, 76, 63, 0.2));
+}
+
+.splash-effect {
+    font-size: 4.5rem;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: scale(0.3) translateY(20px);
+}
+
+.splash-effect.active {
+    opacity: 1;
+    transform: scale(1) translateY(-15px);
+}
+
+.success-message {
+    animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(30px);
+    }
+    70% {
+        transform: scale(1.08) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Celebration Leaves */
+.celebration-leaf {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Make leaves rotate more naturally during fall */
+.celebration-leaf {
+    animation: leafTwirl 3s linear infinite;
+}
+
+@keyframes leafTwirl {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.celebration-leaf {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    animation: leafTwirl 2.8s linear infinite;
+}
+.tree.dragging {
+    opacity: 0.85;
+    filter: drop-shadow(0 20px 25px rgba(15, 76, 63, 0.3));
 }
