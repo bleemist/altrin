@@ -84,7 +84,7 @@ body {
 }
 
 .stagger-item {
-    opacity: 0;
+    opacity: 100;
 }
 
 .section-accent-left:after {
