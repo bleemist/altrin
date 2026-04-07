@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ALTRIN | Transforming Lives & Inspiring Excellence</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts Inter and Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+
+    
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-5 md:px-10 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md">
+                <span class="heading-font text-2xl font-bold tracking-tight text-[#0F4C3F]">ALTRIN</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+                <a href="#mission" class="hover:text-[#E8B923] transition">Mission</a>
+                <a href="#programs" class="hover:text-[#E8B923] transition">Programs</a>
+                <a href="#community" class="hover:text-[#E8B923] transition">Community</a>
+            </div>
+            <div class="flex gap-3">
+                <a href="#" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#1A5A4C] transition">Join Network</a>
+                <button id="mobileMenuBtn" class="block md:hidden text-2xl text-[#0F4C3F]">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md px-5 pb-5 flex flex-col gap-4 text-gray-800 font-medium border-t mt-2">
+            <a href="#mission" class="py-2 hover:text-[#E8B923] transition">Mission</a>
+            <a href="#programs" class="py-2 hover:text-[#E8B923] transition">Programs</a>
+            <a href="#community" class="py-2 hover:text-[#E8B923] transition">Community</a>
+            <a href="#" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Network</a>
+        </div>
+    </nav>
+
+    <!--  HERO SECTION  -->
+    <section class="hero-bg min-h-[90vh] flex items-center pt-24 md:pt-32 relative overflow-hidden">
+        <div class="container mx-auto px-5 md:px-10 py-12 md:py-20 relative z-10">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 text-sm font-medium">
+                    <i class="fas fa-seedling text-[#E8B923]"></i>
+                    <span>Empowering Africa's next generation</span>
+                </div>
+                <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-up">
+                    Transforming Lives & <br> <span class="text-[#E8B923]">Inspiring Excellence</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mt-6 animate-fade-up stagger-item" style="animation-delay: 0.1s;">
+                    Learner tracking · Career guidance · TaRL · Mentorship · Economic empowerment for parents
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-10 animate-fade-up stagger-item" style="animation-delay: 0.2s;">
+                    <a href="#programs" class="btn-gold px-8 py-3 rounded-full font-semibold text-gray-900 shadow-lg flex items-center gap-2"><i class="fas fa-arrow-right"></i> Explore Programs</a>
+                    <a href="#" class="btn-outline-light px-8 py-3 rounded-full font-semibold text-white border-2 border-white/70 hover:bg-white/10"><i class="fas fa-users"></i> Join Community</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!--  MISSION SECTION  -->
+    <section id="mission" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-5 md:px-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-left stagger-item">
+                    <span class="text-[#E8B923] font-semibold tracking-wide text-sm uppercase flex items-center gap-2"><i class="fas fa-bullseye"></i> Our purpose</span>
+                    <h2 class="heading-font text-3xl md:text-4xl font-bold mt-3 text-gray-800">Empowering learners,<br> strengthening families</h2>
+                    <div class="w-20 h-1 bg-[#E8B923] mt-5 mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed text-lg">ALTRIN's mission is to transform lives by targeting primary & secondary learners, undergraduates, and fresh graduates through innovative projects like Learner Tracking Systems, Teaching at the Right Level (TaRL), career guidance, mentorship, and parent economic empowerment programs.</p>
+                    <div class="grid grid-cols-2 gap-5 mt-8">
+                        <div class="border-l-4 border-[#0F4C3F] pl-4"><span class="text-3xl font-bold text-[#0F4C3F]">10K+</span><p class="text-gray-500">Learners impacted</p></div>
+                        <div class="border-l-4 border-[#E8B923] pl-4"><span class="text-3xl font-bold text-[#E8B923]">32+</span><p class="text-gray-500">Schools & communities</p></div>
+                    </div>
+                </div>
+                <div class="relative animate-scale-in">
+                    <div class="bg-[#F4F3EF] rounded-2xl p-6 shadow-xl">
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <i class="fas fa-quote-left text-[#E8B923] text-3xl mb-3"></i>
+                            <p class="text-gray-700 italic">"We believe every child deserves a clear path from primary school to university graduation, supported by engaged parents and modern teaching."</p>
+                            <p class="font-semibold mt-4 text-[#0F4C3F]">— ALTRIN Education Initiative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  PROGRAMS GRID  -->
+    <section id="programs" class="py-20 md:py-28 section-bg-soft">
+        <div class="container mx-auto px-5 md:px-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">What we do</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Flagship initiatives for holistic growth</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
+                    <div class="w-12 h-12 rounded-full bg-[#0F4C3F]/10 flex items-center justify-center mb-4"><i class="fas fa-chart-line text-2xl text-[#0F4C3F]"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800">Learner Tracking Systems</h3>
+                    <p class="text-gray-500 text-sm mt-1">P.1 enrolment → university graduation</p>
+                    <p class="text-gray-600 mt-3">Minimize school dropout rates and improve graduation rates by tracking academic progress, attendance, and at-risk indicators across key transition years.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
+                    <div class="w-12 h-12 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-4"><i class="fas fa-briefcase text-2xl text-[#E8B923]"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800">Career Guidance</h3>
+                    <p class="text-gray-600 mt-3">Academic counselling that accelerates ambitions, helping secondary students make informed career choices through aptitude assessments and role-model sessions.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
+                    <div class="w-12 h-12 rounded-full bg-[#0F4C3F]/10 flex items-center justify-center mb-4"><i class="fas fa-microphone-alt text-2xl text-[#0F4C3F]"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800">Academic Competitions</h3>
+                    <p class="text-gray-600 mt-3">Debates, poem & essay writing to sharpen presentation, public speaking, and formal argument skills — unlocking confidence beyond textbooks.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
+                    <div class="w-12 h-12 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-4"><i class="fas fa-chalkboard-user text-2xl text-[#E8B923]"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800">Teaching at the Right Level</h3>
+                    <p class="text-gray-600 mt-3">Proven approach grouping learners by ability rather than age, improving foundational literacy and numeracy for targeted impact.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
+                    <div class="w-12 h-12 rounded-full bg-[#0F4C3F]/10 flex items-center justify-center mb-4"><i class="fas fa-handshake text-2xl text-[#0F4C3F]"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800">Mentorship Program</h3>
+                    <p class="text-gray-600 mt-3">Connecting students to professionals through mentor-mentee relationships, career workshops, internships, and post-graduate placements.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
+                    <div class="w-12 h-12 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-4"><i class="fas fa-chalkboard text-2xl text-[#E8B923]"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800">Parents & Teachers Capacity Building</h3>
+                    <p class="text-gray-600 mt-3">Teacher workshops in modern teaching techniques + income-generating projects for parents to meet children's educational needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  TaRL and MENTORSHIP SPOTLIGHT  -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-5 md:px-10">
+            <div class="bg-gradient-to-r from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <i class="fas fa-chalkboard-user text-4xl text-[#E8B923] mb-3 block"></i>
+                        <h3 class="heading-font text-2xl md:text-3xl font-bold">Teaching at the Right Level (TaRL)</h3>
+                        <p class="text-white/80 mt-3 leading-relaxed">Identify foundational gaps and group learners by ability — proven to raise literacy & numeracy outcomes in under-resourced schools. Our goal: move every child to grade-level mastery.</p>
+                        <div class="mt-5 flex gap-3">
+                            <span class="bg-white/20 rounded-full px-3 py-1 text-xs">📖 Literacy focus</span>
+                            <span class="bg-white/20 rounded-full px-3 py-1 text-xs">🧮 Numeracy focus</span>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-2xl p-6 backdrop-blur-sm">
+                        <div class="flex justify-between items-center border-b border-white/20 pb-3">
+                            <span>Learners reached (TaRL)</span>
+                            <span class="font-bold text-[#E8B923]">+4,200 in 2025</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-3">
+                            <span>Schools piloting mentorship</span>
+                            <span class="font-bold text-[#E8B923]">15+ partner schools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  PARENT ECONOMIC SUSTAINABILITY  -->
+    <section class="py-16 section-bg-soft">
+        <div class="container mx-auto px-5 md:px-10 text-center">
+            <div class="max-w-3xl mx-auto">
+                <i class="fas fa-hand-holding-heart text-4xl text-[#E8B923] mb-3"></i>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-800">Strengthening Families, Securing Futures</h2>
+                <p class="text-gray-600 mt-4 text-lg">We empower economic sustainability of parents through projects that strengthen financial capacities to meet educational needs for their children. From VSLA groups to small business incubation, ALTRIN works alongside parents.</p>
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <div class="bg-white rounded-full px-6 py-2 shadow-sm flex items-center gap-2"><i class="fas fa-chart-line text-[#0F4C3F]"></i> Financial literacy</div>
+                    <div class="bg-white rounded-full px-6 py-2 shadow-sm flex items-center gap-2"><i class="fas fa-store text-[#0F4C3F]"></i> SME incubation</div>
+                    <div class="bg-white rounded-full px-6 py-2 shadow-sm flex items-center gap-2"><i class="fas fa-users text-[#0F4C3F]"></i> Parent cooperatives</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  ONLINE COMMUNITY  -->
+    <section id="community" class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-5 md:px-10 text-center relative z-2">
+            <div class="max-w-2xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-gray-100 rounded-full px-5 py-2 mb-5">
+                    <i class="fas fa-calendar-alt text-[#E8B923]"></i>
+                    <span class="text-sm font-medium">Join Our Online Community Network</span>
+                </div>
+                <h2 class="heading-font text-4xl md:text-5xl font-bold text-gray-800">Fortnightly on Tuesdays</h2>
+                <p class="text-gray-500 text-lg mt-4">Live sessions, expert talks, peer support & networking. Open to students, graduates, parents & educators.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-6">
+                    <a href="#" class="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-youtube text-2xl text-red-500"></i> YouTube</a>
+                    <a href="#" class="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-x-twitter text-xl"></i> X (Twitter)</a>
+                    <a href="#" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-instagram text-xl"></i> Instagram</a>
+                </div>
+                <div class="mt-10 text-sm text-gray-400 border-t pt-8">Follow us for updates on TaRL workshops, mentorship matchmaking, and learner tracking insights</div>
+            </div>
+        </div>
+    </section>
+
+    <!--  FOOTER  -->
+    <footer class="bg-[#0A2E26] text-white py-12">
+        <div class="container mx-auto px-5 md:px-10">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-[#E8B923] rounded-md flex items-center justify-center font-bold text-[#0F4C3F]">A</div>
+                        <span class="heading-font text-xl font-bold">ALTRIN</span>
+                    </div>
+                    <p class="text-white/60 text-sm">Transforming lives through learner tracking, career guidance, TaRL, mentorship & parent economic empowerment.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Programs</h4>
+                    <ul class="space-y-2 text-white/60 text-sm">
+                        <li>Learner Tracking</li>
+                        <li>Career Guidance</li>
+                        <li>TaRL</li>
+                        <li>Mentorship</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Community</h4>
+                    <ul class="space-y-2 text-white/60 text-sm">
+                        <li>Fortnightly Tuesdays</li>
+                        <li>Academic competitions</li>
+                        <li>Parent capacity building</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-3">Connect</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-[#E8B923] transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="hover:text-[#E8B923] transition"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="hover:text-[#E8B923] transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="text-white/40 text-xs mt-4">© 2026 ALTRIN — inspiring academic & professional excellence</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document document.getElementById('mobileMenu');
+            if(mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if(window.scrollY > 30) {
+                    navbar.classList.add('nav-scrolled', 'shadow-md');
+                } else {
+                    navbar.classList.remove('nav-scrolled', 'shadow-md');
+                }
+            });
+            const staggerItems = document.querySelectorAll('.stagger-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0) translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            staggerItems.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateX(0px) translateY(15px)';
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>
