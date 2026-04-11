@@ -146,15 +146,12 @@ body {
     background-color: #F9FBF8;
 }
 
-.carousel-container {
-    position: relative;
-    display: flex;
-
-   }
 .carousel {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    position: relative;
+    display: flex;
 }
 .track {
     display: flex;
@@ -171,4 +168,26 @@ body {
 .track img:hover {
     transform: scale(1.05);
     transition: 0.3s;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+#left {
+    left: 0;
+
+}
+
+#right {
+    right: 0;
 }

@@ -102,8 +102,8 @@
                 <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Flagship initiatives for holistic growth</h2>
                 <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
             </div>
-            <div class="carousel-container">           
-                <div class="carousel" id="carousel">
+            <div class="carousel">           
+                <button id="left">&#10094;</button>
                     <div class="track">
                         <img src="Resources/IMG-20260327-WA0010.jpg" >
                         <img src="Resources/IMG-20260327-WA0012.jpg" >
@@ -135,7 +135,7 @@
                         <img src="Resources/IMG-20260327-WA0038.jpg" >
                         <img src="Resources/IMG-20260327-WA0039.jpg" >
                     </div>
-                </div>
+                <button id="right">&#10095;</button>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-2xl p-6 shadow-sm card-lift border border-gray-100 stagger-item">
@@ -312,6 +312,25 @@
                 observer.observe(el);
             });
         })();
+
+         const carousel = 
+         document.querySelectorAll('.carousel');
+         const left =
+         document.getElementById("left");
+         const right = 
+         document.getElementById("right");
+         right.addEventListener("click", (smooth) => {
+            carousel.scrollBy({
+                left: 180,
+                behavior: "smooth"
+            });
+         });
+         left.addEventListener("click", (smooth) => {
+            carousel.scrollBy({
+                left: -180,
+                behavior: "smooth"
+            });
+         });  
 
     </script>
 </body>
