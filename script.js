@@ -4,7 +4,11 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const navbar = document.getElementById('navbar');
 
-    if (!mobileBtn || !mobileMenu) return;
+    // If either element is missing, log and exit
+    if (!mobileBtn || !mobileMenu) {
+        console.log('⚠️ Mobile menu elements not found on this page');
+        return;
+    }
 
     let isMenuOpen = false;
 
@@ -12,43 +16,66 @@
         isMenuOpen = !isMenuOpen;
         if (isMenuOpen) {
             mobileMenu.classList.remove('hidden');
+            mobileMenu.style.display = 'flex'; // Ensure it's visible
             mobileBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
             mobileBtn.style.transform = 'rotate(90deg)';
         } else {
             mobileMenu.classList.add('hidden');
+            mobileMenu.style.display = ''; // Reset
             mobileBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
             mobileBtn.style.transform = 'rotate(0deg)';
         }
     }
 
-    mobileBtn.addEventListener('click', (e) => {
+    // Click on hamburger button
+    mobileBtn.addEventListener('click', function(e) {
         e.stopPropagation();
+        e.preventDefault();
         toggleMenu();
     });
 
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (isMenuOpen) toggleMenu();
+    // Auto close when clicking any menu link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (isMenuOpen) {
+                // Close menu after a short delay to allow navigation
+                setTimeout(function() {
+                    toggleMenu();
+                }, 150);
+            }
         });
     });
 
-    document.addEventListener('click', (e) => {
-        if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (isMenuOpen && 
+            !mobileMenu.contains(e.target) && 
+            !mobileBtn.contains(e.target)) {
             toggleMenu();
         }
     });
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 30) {
-            navbar.classList.add('nav-scrolled', 'shadow-md');
-        } else {
-            navbar.classList.remove('nav-scrolled', 'shadow-md');
+    // Navbar scroll effect
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 30) {
+                navbar.classList.add('nav-scrolled', 'shadow-md');
+            } else {
+                navbar.classList.remove('nav-scrolled', 'shadow-md');
+            }
+        });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape" && isMenuOpen) {
+            toggleMenu();
         }
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape" && isMenuOpen) toggleMenu();
-    });
+    // Debug: Log that mobile menu is ready
+    console.log('📱 Mobile menu initialized');
 })();
 
 
@@ -59,7 +86,10 @@
     let charIndex = 0;
     let isDeleting = false;
     const element = document.getElementById('changing-word');
-    if (!element) return;
+    if (!element) {
+        console.log('⚠️ Typewriter element not found on this page');
+        return;
+    }
     let speed = 100;
 
     function typeEffect() {
@@ -85,6 +115,7 @@
         setTimeout(typeEffect, speed);
     }
     typeEffect();
+    console.log('⌨️ Typewriter effect started');
 })();
 
 
@@ -99,23 +130,22 @@
     const totalNum = document.getElementById('totalSlidesNum');
 
     // Exit if slider doesn't exist on this page
-    if (!track || slides.length === 0) return;
+    if (!track || slides.length === 0) {
+        console.log('⚠️ Gallery slider not found on this page');
+        return;
+    }
 
     let currentIndex = 0;
     const totalSlides = slides.length;
     let autoPlayInterval;
     const AUTO_PLAY_DELAY = 5000;
 
-    // Set total slide count
     if (totalNum) totalNum.textContent = totalSlides;
 
-    // Update slider position and active elements
     function updateSlider(index) {
-        // Move the track
-        track.style.transform = `translateX(-${index * 100}%)`;
+        track.style.transform = 'translateX(-' + index * 100 + '%)';
 
-        // Update dots
-        dots.forEach((dot, i) => {
+        dots.forEach(function(dot, i) {
             dot.classList.remove('bg-[#E8B923]', 'scale-125');
             dot.classList.add('bg-gray-300');
             if (i === index) {
@@ -124,11 +154,9 @@
             }
         });
 
-        // Update counter
         if (currentNum) currentNum.textContent = index + 1;
     }
 
-    // Go to a specific slide
     function goToSlide(index) {
         if (index < 0) {
             currentIndex = totalSlides - 1;
@@ -140,45 +168,36 @@
         updateSlider(currentIndex);
     }
 
-    // Next slide
     function nextSlide() {
         goToSlide(currentIndex + 1);
         resetAutoPlay();
     }
 
-    // Previous slide
     function prevSlide() {
         goToSlide(currentIndex - 1);
         resetAutoPlay();
     }
 
-    // Reset autoplay timer
     function resetAutoPlay() {
         clearInterval(autoPlayInterval);
         startAutoPlay();
     }
 
-    // Start autoplay
     function startAutoPlay() {
         autoPlayInterval = setInterval(nextSlide, AUTO_PLAY_DELAY);
     }
 
-    // ====== EVENT LISTENERS ======
-
-    // Navigation buttons
     if (prevBtn) prevBtn.addEventListener('click', prevSlide);
     if (nextBtn) nextBtn.addEventListener('click', nextSlide);
 
-    // Dot indicators
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
+    dots.forEach(function(dot, index) {
+        dot.addEventListener('click', function() {
             goToSlide(index);
             resetAutoPlay();
         });
     });
 
-    // Keyboard support (Arrow keys)
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowRight') {
             nextSlide();
             resetAutoPlay();
@@ -188,19 +207,18 @@
         }
     });
 
-    // Touch/swipe support for mobile
     let touchStartX = 0;
     let touchEndX = 0;
     const sliderContainer = document.querySelector('.overflow-hidden');
 
     if (sliderContainer) {
-        sliderContainer.addEventListener('touchstart', (e) => {
+        sliderContainer.addEventListener('touchstart', function(e) {
             touchStartX = e.changedTouches[0].screenX;
         }, { passive: true });
 
-        sliderContainer.addEventListener('touchend', (e) => {
+        sliderContainer.addEventListener('touchend', function(e) {
             touchEndX = e.changedTouches[0].screenX;
-            const diff = touchStartX - touchEndX;
+            var diff = touchStartX - touchEndX;
             if (Math.abs(diff) > 50) {
                 if (diff > 0) {
                     nextSlide();
@@ -212,19 +230,17 @@
         }, { passive: true });
     }
 
-    // Pause autoplay on hover
     const sliderWrapper = document.querySelector('.relative.group');
     if (sliderWrapper) {
-        sliderWrapper.addEventListener('mouseenter', () => {
+        sliderWrapper.addEventListener('mouseenter', function() {
             clearInterval(autoPlayInterval);
         });
 
-        sliderWrapper.addEventListener('mouseleave', () => {
+        sliderWrapper.addEventListener('mouseleave', function() {
             startAutoPlay();
         });
     }
 
-    // Initialize slider
     updateSlider(0);
     startAutoPlay();
 
@@ -241,8 +257,10 @@
     const splash = document.getElementById('splash');
     const bucketEmoji = document.getElementById('bucket');
 
-    // Exit if tree animation doesn't exist on this page
-    if (!tree || !bucketTarget) return;
+    if (!tree || !bucketTarget) {
+        console.log('⚠️ Tree planting animation not found on this page');
+        return;
+    }
 
     let hasPlanted = false;
     let isDragging = false;
@@ -257,7 +275,7 @@
         tree.style.transition = 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
         tree.style.left = originalRect.left + 'px';
         tree.style.top = originalRect.top + 'px';
-        setTimeout(() => {
+        setTimeout(function() {
             tree.style.position = '';
             tree.style.left = '';
             tree.style.top = '';
@@ -267,40 +285,40 @@
         }, 480);
     }
 
-    // ====== DESKTOP DRAG & DROP ======
     tree.setAttribute('draggable', 'true');
 
-    tree.addEventListener('dragstart', (e) => {
+    tree.addEventListener('dragstart', function(e) {
         if (hasPlanted) return;
         saveOriginalPosition();
         tree.classList.add('dragging');
         e.dataTransfer.setData('text/plain', 'tree');
     });
 
-    tree.addEventListener('dragend', () => tree.classList.remove('dragging'));
+    tree.addEventListener('dragend', function() {
+        tree.classList.remove('dragging');
+    });
 
-    bucketTarget.addEventListener('dragover', (e) => {
+    bucketTarget.addEventListener('dragover', function(e) {
         if (hasPlanted) return;
         e.preventDefault();
         bucketTarget.classList.add('drag-over');
     });
 
-    bucketTarget.addEventListener('dragleave', () => {
+    bucketTarget.addEventListener('dragleave', function() {
         bucketTarget.classList.remove('drag-over');
     });
 
-    bucketTarget.addEventListener('drop', (e) => {
+    bucketTarget.addEventListener('drop', function(e) {
         e.preventDefault();
         bucketTarget.classList.remove('drag-over');
         if (!hasPlanted) handleSuccessfulPlant();
     });
 
-    // ====== MOBILE TOUCH ======
-    tree.addEventListener('touchstart', (e) => {
+    tree.addEventListener('touchstart', function(e) {
         if (hasPlanted) return;
         isDragging = true;
         saveOriginalPosition();
-        const touch = e.touches[0];
+        var touch = e.touches[0];
         tree.style.transition = 'none';
         tree.style.position = 'fixed';
         tree.style.left = (touch.clientX - 40) + 'px';
@@ -310,88 +328,77 @@
         e.preventDefault();
     }, { passive: false });
 
-    document.addEventListener('touchmove', (e) => {
+    document.addEventListener('touchmove', function(e) {
         if (!isDragging) return;
         e.preventDefault();
-        const touch = e.touches[0];
+        var touch = e.touches[0];
         tree.style.left = (touch.clientX - 40) + 'px';
         tree.style.top = (touch.clientY - 40) + 'px';
     }, { passive: false });
 
-    document.addEventListener('touchend', (e) => {
+    document.addEventListener('touchend', function(e) {
         if (!isDragging || hasPlanted) return;
         isDragging = false;
         tree.classList.remove('dragging');
         handleSuccessfulPlant();
     });
 
-    // ====== SUCCESS ANIMATION ======
     function handleSuccessfulPlant() {
         hasPlanted = true;
-
-        // Hide tree with nice animation
         tree.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         tree.style.opacity = '0';
         tree.style.transform = 'scale(0.6) translateY(50px)';
-
-        // Show splash effect
         splash.classList.add('active');
-
-        // Show success message + reset button
         successMsg.classList.remove('hidden');
         resetBtn.classList.remove('hidden');
-
-        // Celebration leaves burst
         createCelebrationBurst();
-
-        // Bucket bounce
         bucketEmoji.style.transition = 'transform 0.6s ease';
         bucketEmoji.style.transform = 'scale(1.2) rotate(15deg)';
-        setTimeout(() => {
+        setTimeout(function() {
             bucketEmoji.style.transform = 'scale(1) rotate(0deg)';
         }, 600);
     }
 
-    // ====== CELEBRATION BURST ======
     function createCelebrationBurst() {
-        const rect = bucketTarget.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2 - 30;
-        const leafEmojis = ['🍃', '🌿', '🍀', '🟢', '🌱'];
+        var rect = bucketTarget.getBoundingClientRect();
+        var centerX = rect.left + rect.width / 2;
+        var centerY = rect.top + rect.height / 2 - 30;
+        var leafEmojis = ['🍃', '🌿', '🍀', '🟢', '🌱'];
 
-        for (let i = 0; i < 52; i++) {
-            setTimeout(() => {
-                const leaf = document.createElement('div');
-                leaf.className = 'celebration-leaf';
-                leaf.textContent = leafEmojis[Math.floor(Math.random() * leafEmojis.length)];
-                leaf.style.left = (centerX + (Math.random() - 0.5) * 80) + 'px';
-                leaf.style.top = centerY + 'px';
-                leaf.style.fontSize = (Math.random() * 24 + 18) + 'px';
-                leaf.style.position = 'fixed';
-                leaf.style.zIndex = '1000';
-                leaf.style.pointerEvents = 'none';
-                document.body.appendChild(leaf);
+        for (var i = 0; i < 52; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    var leaf = document.createElement('div');
+                    leaf.className = 'celebration-leaf';
+                    leaf.textContent = leafEmojis[Math.floor(Math.random() * leafEmojis.length)];
+                    leaf.style.left = (centerX + (Math.random() - 0.5) * 80) + 'px';
+                    leaf.style.top = centerY + 'px';
+                    leaf.style.fontSize = (Math.random() * 24 + 18) + 'px';
+                    leaf.style.position = 'fixed';
+                    leaf.style.zIndex = '1000';
+                    leaf.style.pointerEvents = 'none';
+                    document.body.appendChild(leaf);
 
-                const angle = Math.random() * 360;
-                const distance = Math.random() * 165 + 135;
-                const moveX = Math.cos(angle * Math.PI / 180) * distance;
-                const moveY = Math.sin(angle * Math.PI / 180) * distance - (Math.random() * 90 + 80);
+                    var angle = Math.random() * 360;
+                    var distance = Math.random() * 165 + 135;
+                    var moveX = Math.cos(angle * Math.PI / 180) * distance;
+                    var moveY = Math.sin(angle * Math.PI / 180) * distance - (Math.random() * 90 + 80);
 
-                leaf.animate([
-                    { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
-                    { transform: `translate(${moveX*0.6}px, ${moveY*0.6}px) rotate(${angle*2}deg)`, opacity: 1 },
-                    { transform: `translate(${moveX}px, ${moveY + 270}px) rotate(${angle*8}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 1600 + 2300,
-                    easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
-                });
-                setTimeout(() => leaf.remove(), 4500);
-            }, i * 6);
+                    leaf.animate([
+                        { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+                        { transform: 'translate(' + (moveX*0.6) + 'px, ' + (moveY*0.6) + 'px) rotate(' + (angle*2) + 'deg)', opacity: 1 },
+                        { transform: 'translate(' + moveX + 'px, ' + (moveY + 270) + 'px) rotate(' + (angle*8) + 'deg)', opacity: 0 }
+                    ], {
+                        duration: Math.random() * 1600 + 2300,
+                        easing: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+                    });
+                    setTimeout(function() { leaf.remove(); }, 4500);
+                }, i * 6);
+            })(i);
         }
     }
 
-    // ====== RESET ======
-    resetBtn.addEventListener('click', () => {
+    resetBtn.addEventListener('click', function() {
         hasPlanted = false;
         isDragging = false;
         resetTreePosition();
@@ -399,15 +406,16 @@
         successMsg.classList.add('hidden');
         resetBtn.classList.add('hidden');
     });
+
+    console.log('🌳 Tree planting animation ready');
 })();
 
 
-// ====== FAQ TOGGLE (Contact Page) ======
+// ====== FAQ TOGGLE ======
 (function() {
-    // Make toggleFaq available globally for inline onclick
     window.toggleFaq = function(element) {
-        const answer = element.nextElementSibling;
-        const icon = element.querySelector('i');
+        var answer = element.nextElementSibling;
+        var icon = element.querySelector('i');
         if (answer) {
             answer.classList.toggle('open');
         }
@@ -415,41 +423,46 @@
             icon.classList.toggle('rotate-180');
         }
     };
+    console.log('❓ FAQ toggle ready');
 })();
 
 
 // ====== CONTACT FORM ======
 (function() {
-    const contactForm = document.getElementById('contactForm');
-    if (!contactForm) return;
+    var contactForm = document.getElementById('contactForm');
+    if (!contactForm) {
+        console.log('⚠️ Contact form not found on this page');
+        return;
+    }
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const name = document.getElementById('name')?.value || '';
-        const email = document.getElementById('email')?.value || '';
-        const subject = document.getElementById('subject')?.value || '';
-        const msg = document.getElementById('msg')?.value || '';
+        var name = document.getElementById('name')?.value || '';
+        var email = document.getElementById('email')?.value || '';
+        var subject = document.getElementById('subject')?.value || '';
+        var msg = document.getElementById('msg')?.value || '';
 
         if (name && email && subject && msg) {
-            // Simple success message
-            const button = contactForm.querySelector('button[type="submit"]');
-            const originalText = button ? button.innerHTML : '';
+            var button = contactForm.querySelector('button[type="submit"]');
+            var originalText = button ? button.innerHTML : '';
 
             if (button) {
                 button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
                 button.style.background = '#22c55e';
-                setTimeout(() => {
+                setTimeout(function() {
                     button.innerHTML = originalText;
                     button.style.background = '';
                 }, 3000);
             }
 
             contactForm.reset();
+            console.log('📧 Contact form submitted successfully');
         } else {
             alert('Please fill in all required fields.');
         }
     });
+    console.log('📧 Contact form ready');
 })();
 
 
@@ -458,3 +471,4 @@ console.log('🌳 ALTRIN Website Loaded Successfully!');
 console.log('📌 Motto: Transforming Lives | Building Communities');
 console.log('📧 Contact: info@altrin.org');
 console.log('📱 Pages: Home, About, Programs, Community, Contact');
+console.log('✅ All features ready.');
