@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALTRIN | Community — Transforming Lives | Building Communities</title>
+    <link rel="icon" type="image/png" href="./Resources/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .community-hero {
+            background: linear-gradient(135deg, #03211a 0%, #0d614f 55%, #03211a 100%);
+            position: relative;
+            isolation: isolate;
+        }
+        .community-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 40%, rgba(232, 185, 35, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .event-card {
+            transition: all 0.3s ease;
+        }
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+        .partner-logo {
+            transition: all 0.3s ease;
+        }
+        .partner-logo:hover {
+            transform: scale(1.05);
+            filter: brightness(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-5 md:px-10 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md" />
+            <span class="heading-font text-2xl font-bold tracking-tight text-[#0F4C3F]">ALTRIN</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+            <a href="index.html" class="hover:text-[#E8B923] transition">Home</a>
+            <a href="about.html" class="hover:text-[#E8B923] transition">About</a>
+            <a href="programs.html" class="hover:text-[#E8B923] transition">Programs</a>
+            <a href="community.html" class="text-[#0F4C3F] font-semibold border-b-2 border-[#E8B923]">Community</a>
+            <a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a>
+        </div>
+        <div class="flex gap-3">
+            <a href="https://form.jotform.com/243394095666064" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Us</a>
+            <button id="mobileMenuBtn" class="block md:hidden text-2xl text-[#0F4C3F]">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md px-5 pb-5 flex flex-col gap-4 text-gray-800 font-medium border-t mt-2">
+        <a href="index.html" class="py-2 hover:text-[#E8B923] transition">Home</a>
+        <a href="about.html" class="py-2 hover:text-[#E8B923] transition">About</a>
+        <a href="programs.html" class="py-2 hover:text-[#E8B923] transition">Programs</a>
+        <a href="community.html" class="py-2 text-[#0F4C3F] font-semibold">Community</a>
+        <a href="contact.html" class="py-2 hover:text-[#E8B923] transition">Contact</a>
+        <a href="https://form.jotform.com/243394095666064" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Us</a>
+    </div>
+</nav>
+
+<!-- ====== COMMUNITY HERO ====== -->
+<section class="community-hero min-h-[50vh] flex items-center pt-20 md:pt-24 relative overflow-hidden">
+    <div class="container mx-auto px-5 md:px-10 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-1.5 mb-6 text-sm font-medium">
+                <i class="fas fa-users text-[#E8B923]"></i>
+                <span>Our Community</span>
+            </div>
+            <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                Building <span class="text-[#E8B923]">Community</span>,<br />Creating Impact
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mt-6">
+                ALTRIN is a community-driven initiative. We work collectively with schools, families, and local leaders to create lasting change in Buliisa District and beyond.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== COMMUNITY ENGAGEMENT ====== -->
+<section class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">How we engage</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Community Engagement Channels</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center p-6 bg-[#F9FBF8] rounded-2xl">
+                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-radio text-3xl text-[#E8B923]"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800">Radio Talks</h3>
+                <p class="text-gray-500 text-sm mt-2">Fortnightly on Tuesdays at Biiso FM 98.7. Live sessions featuring expert talks, peer support, and community announcements.</p>
+            </div>
+            <div class="text-center p-6 bg-[#F9FBF8] rounded-2xl">
+                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-hand-holding-heart text-3xl text-[#E8B923]"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800">Community Events</h3>
+                <p class="text-gray-500 text-sm mt-2">Tree planting campaigns, clean-up drives, and community sensitization programs that bring people together for collective action.</p>
+            </div>
+            <div class="text-center p-6 bg-[#F9FBF8] rounded-2xl">
+                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-hands-helping text-3xl text-[#E8B923]"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800">Volunteer Network</h3>
+                <p class="text-gray-500 text-sm mt-2">Join a growing network of volunteers, mentors, and community champions working together to transform lives.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== RADIO TALKS DETAIL ====== -->
+<section class="py-20 md:py-28 section-bg-soft">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Community outreach</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Radio Talks on Biiso FM 98.7</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">ALTRIN's desire is to work collectively with the community and general public to ease information access and transparency. In October 2021, we held our first radio talk show on Biiso FM 98.7 to create awareness of our existence and sensitize the general public on what impact and positive change we were about to create.</p>
+                <p class="text-gray-600 leading-relaxed mt-4">The public was enthusiastic about the new project that intended to inspire academic and professional excellence. Since then, ALTRIN has had open engagements with the community through various programs like radio announcements and advertisements about activities and programs that foster community transformation.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Radio Talk Schedule:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Fortnightly on Tuesdays</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Time: 7:00 PM - 8:00 PM EAT</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Station: Biiso FM 98.7</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Topics: Education, career guidance, mentorship, parent empowerment, climate action</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 text-white">
+                <div class="text-center">
+                    <i class="fas fa-podcast text-6xl text-[#E8B923] mb-4 block"></i>
+                    <h3 class="text-2xl font-bold">Tune In!</h3>
+                    <p class="text-white/70 mt-2">Join our fortnightly radio talks for expert insights, community updates, and inspiration.</p>
+                    <div class="mt-6 space-y-3">
+                        <p class="flex items-center justify-center gap-2"><i class="fas fa-calendar-alt text-[#E8B923]"></i> Fortnightly Tuesdays</p>
+                        <p class="flex items-center justify-center gap-2"><i class="fas fa-clock text-[#E8B923]"></i> 7:00 PM EAT</p>
+                        <p class="flex items-center justify-center gap-2"><i class="fas fa-radio text-[#E8B923]"></i> Biiso FM 98.7</p>
+                    </div>
+                    <a href="https://www.youtube.com/@thetransformer24" class="inline-flex items-center gap-2 mt-6 bg-[#E8B923] text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-[#d4a81e] transition-all">
+                        <i class="fab fa-youtube"></i> Watch Recordings
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== EVENTS ====== -->
+<section class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Upcoming & past</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Community Events</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-500 mt-4">Events that bring our community together for learning, action, and celebration.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="event-card bg-[#F9FBF8] rounded-2xl overflow-hidden border border-gray-100">
+                <div class="bg-[#0F4C3F] p-4 text-white">
+                    <span class="text-sm uppercase tracking-wider">Annual Event</span>
+                    <h3 class="text-xl font-bold mt-1">Inter-Secondary Schools Debate</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 text-sm">An annual competition where students from secondary schools across Buliisa District compete in debate, poem recitation, and essay writing.</p>
+                    <div class="flex items-center gap-2 mt-4 text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt text-[#E8B923]"></i>
+                        <span>Annually in March</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
+                        <i class="fas fa-map-pin text-[#E8B923]"></i>
+                        <span>Biiso, Buliisa</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card bg-[#F9FBF8] rounded-2xl overflow-hidden border border-gray-100">
+                <div class="bg-[#E8B923] p-4 text-gray-900">
+                    <span class="text-sm uppercase tracking-wider">Ongoing</span>
+                    <h3 class="text-xl font-bold mt-1">Tree Planting Campaign</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 text-sm">A community-wide tree planting initiative aimed at restoring environmental sustainability and combating climate change in Buliisa District.</p>
+                    <div class="flex items-center gap-2 mt-4 text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt text-[#E8B923]"></i>
+                        <span>Ongoing (Rainy Seasons)</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
+                        <i class="fas fa-map-pin text-[#E8B923]"></i>
+                        <span>Various locations, Buliisa</span>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card bg-[#F9FBF8] rounded-2xl overflow-hidden border border-gray-100">
+                <div class="bg-[#0F4C3F] p-4 text-white">
+                    <span class="text-sm uppercase tracking-wider">Quarterly</span>
+                    <h3 class="text-xl font-bold mt-1">Parent Empowerment Workshops</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 text-sm">Workshops designed to equip parents with financial literacy, business management skills, and strategies to support their children's education.</p>
+                    <div class="flex items-center gap-2 mt-4 text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt text-[#E8B923]"></i>
+                        <span>Quarterly</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
+                        <i class="fas fa-map-pin text-[#E8B923]"></i>
+                        <span>Biiso Town Council</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PARTNERS ====== -->
+<section class="py-20 md:py-28 section-bg-soft">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Our partners</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Who We Work With</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-500 mt-4">Collaborations that amplify our impact and extend our reach across Buliisa District and beyond.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-school text-2xl text-[#0F4C3F]"></i>
+                </div>
+                <h4 class="font-bold text-gray-800">10+ Schools</h4>
+                <p class="text-gray-500 text-sm">Partner schools across Buliisa District implementing ALTRIN programs.</p>
+            </div>
+            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-handshake text-2xl text-[#0F4C3F]"></i>
+                </div>
+                <h4 class="font-bold text-gray-800">Dolica SDA Development Project</h4>
+                <p class="text-gray-500 text-sm">Partnership for community outreach and radio talk programs.</p>
+            </div>
+            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-university text-2xl text-[#0F4C3F]"></i>
+                </div>
+                <h4 class="font-bold text-gray-800">Local Government</h4>
+                <p class="text-gray-500 text-sm">Buliisa District Local Government supporting community development initiatives.</p>
+            </div>
+            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-people-arrows text-2xl text-[#0F4C3F]"></i>
+                </div>
+                <h4 class="font-bold text-gray-800">Community Leaders</h4>
+                <p class="text-gray-500 text-sm">Local leaders and community champions driving grassroots transformation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== VOLUNTEER ====== -->
+<section class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Get involved</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Volunteer With ALTRIN</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">Serving with ALTRIN is an opportunity to voluntarily participate in a community transformation effort towards inspiring academic and professional excellence in Buliisa District and Uganda at large.</p>
+                <p class="text-gray-600 leading-relaxed mt-4">We welcome volunteers, expert advisors, and community transformation enthusiasts to join our growing network of change-makers.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Opportunities Available:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Mentorship and career guidance</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Teaching and tutoring support</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Community outreach and mobilization</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Resource mobilization and partnerships</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Environmental conservation activities</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 text-white text-center">
+                <i class="fas fa-hand-peace text-6xl text-[#E8B923] mb-4 block"></i>
+                <h3 class="text-2xl font-bold">Ready to Make a Difference?</h3>
+                <p class="text-white/70 mt-2">Join ALTRIN's volunteer network and be part of the transformation.</p>
+                <div class="mt-6 space-y-3">
+                    <div class="flex items-center justify-center gap-2 text-sm text-white/80">
+                        <i class="fas fa-users text-[#E8B923]"></i>
+                        <span>Join a community of change-makers</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-sm text-white/80">
+                        <i class="fas fa-graduation-cap text-[#E8B923]"></i>
+                        <span>Impact 500+ learners</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2 text-sm text-white/80">
+                        <i class="fas fa-tree text-[#E8B923]"></i>
+                        <span>Contribute to climate action</span>
+                    </div>
+                </div>
+                <a href="https://form.jotform.com/243394095666064" class="inline-flex items-center gap-2 mt-6 bg-[#E8B923] text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-[#d4a81e] transition-all">
+                    <i class="fas fa-arrow-right"></i> Join Us Today
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="py-20 bg-gradient-to-r from-[#0F4C3F] to-[#1A5A4C]">
+    <div class="container mx-auto px-5 md:px-10 text-center">
+        <h2 class="heading-font text-3xl md:text-5xl font-bold text-white">Be Part of Our Community</h2>
+        <p class="text-white/80 text-lg max-w-2xl mx-auto mt-4">Follow us on social media, tune in to our radio talks, and join our volunteer network.</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+            <a href="https://www.youtube.com/@thetransformer24" class="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-youtube text-2xl text-red-500"></i> YouTube</a>
+            <a href="https://x.com/i/status/2034237319016804461" class="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-x-twitter text-xl"></i> X (Twitter)</a>
+            <a href="https://www.instagram.com/thetransformer24/profilecard/?igsh=MWdnZTI2dmQwZjFkNA%3D%3D" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-instagram text-xl"></i> Instagram</a>
+            <a href="contact.html" class="btn-outline-light px-8 py-3 rounded-full font-semibold text-white border-2 border-white/70 hover:bg-white/10"><i class="fas fa-envelope"></i> Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-[#0A2E26] text-white py-12">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-12 h-12 object-contain rounded-md" />
+                    <span class="heading-font text-xl font-bold">ALTRIN</span>
+                </div>
+                <p class="text-white/60 text-sm">Transforming lives through learner tracking, career guidance, TaRL, mentorship, parent economic empowerment, and environmental stewardship.</p>
+                <p class="text-white/40 text-xs mt-4">© 2026 ALTRIN — Transforming Lives | Building Communities</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-white/60 text-sm">
+                    <li><a href="index.html" class="hover:text-[#E8B923] transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#E8B923] transition">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-[#E8B923] transition">Programs</a></li>
+                    <li><a href="community.html" class="hover:text-[#E8B923] transition">Community</a></li>
+                    <li><a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Programs</h4>
+                <ul class="space-y-2 text-white/60 text-sm">
+                    <li>Learner Tracking</li>
+                    <li>Career Guidance</li>
+                    <li>TaRL</li>
+                    <li>Mentorship</li>
+                    <li>Climate Action</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Connect</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="https://www.youtube.com/@thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/albeducdrive" class="hover:text-[#E8B923] transition"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/i/status/2034237319016804461" class="hover:text-[#E8B923] transition"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/108833296" class="hover:text-[#E8B923] transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:info@altrin.org" class="hover:text-[#E8B923] transition"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                <p class="text-white/40 text-xs mt-4">P.O. Box 490569, Hoima (U)</p>
+                <p class="text-white/40 text-xs">Biiso Town Council, Buliisa</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

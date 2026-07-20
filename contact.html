@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALTRIN | Contact — Transforming Lives | Building Communities</title>
+    <link rel="icon" type="image/png" href="./Resources/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #03211a 0%, #0d614f 55%, #03211a 100%);
+            position: relative;
+            isolation: isolate;
+        }
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 40%, rgba(232, 185, 35, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1e2a2e;
+        }
+        .faq-question:hover {
+            color: #E8B923;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #6b7280;
+        }
+        .faq-answer.open {
+            max-height: 200px;
+            padding-top: 0.75rem;
+        }
+        .contact-info-card {
+            transition: all 0.3s ease;
+        }
+        .contact-info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-5 md:px-10 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md" />
+            <span class="heading-font text-2xl font-bold tracking-tight text-[#0F4C3F]">ALTRIN</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+            <a href="index.html" class="hover:text-[#E8B923] transition">Home</a>
+            <a href="about.html" class="hover:text-[#E8B923] transition">About</a>
+            <a href="programs.html" class="hover:text-[#E8B923] transition">Programs</a>
+            <a href="community.html" class="hover:text-[#E8B923] transition">Community</a>
+            <a href="contact.html" class="text-[#0F4C3F] font-semibold border-b-2 border-[#E8B923]">Contact</a>
+        </div>
+        <div class="flex gap-3">
+            <a href="https://form.jotform.com/243394095666064" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Us</a>
+            <button id="mobileMenuBtn" class="block md:hidden text-2xl text-[#0F4C3F]">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md px-5 pb-5 flex flex-col gap-4 text-gray-800 font-medium border-t mt-2">
+        <a href="index.html" class="py-2 hover:text-[#E8B923] transition">Home</a>
+        <a href="about.html" class="py-2 hover:text-[#E8B923] transition">About</a>
+        <a href="programs.html" class="py-2 hover:text-[#E8B923] transition">Programs</a>
+        <a href="community.html" class="py-2 hover:text-[#E8B923] transition">Community</a>
+        <a href="contact.html" class="py-2 text-[#0F4C3F] font-semibold">Contact</a>
+        <a href="https://form.jotform.com/243394095666064" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Us</a>
+    </div>
+</nav>
+
+<!-- ====== CONTACT HERO ====== -->
+<section class="contact-hero min-h-[40vh] flex items-center pt-20 md:pt-24 relative overflow-hidden">
+    <div class="container mx-auto px-5 md:px-10 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-1.5 mb-6 text-sm font-medium">
+                <i class="fas fa-phone-alt text-[#E8B923]"></i>
+                <span>Get in Touch</span>
+            </div>
+            <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                Let's <span class="text-[#E8B923]">Connect</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mt-6">
+                Applications, collaborations, or just a conversation — we're ready to hear from you.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== CONTACT INFO & FORM ====== -->
+<section class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Contact Info -->
+            <div>
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Reach out</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Contact Information</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600">We'd love to hear from you. Whether you have a question, want to collaborate, or are interested in volunteering — reach out to us.</p>
+
+                <div class="space-y-6 mt-8">
+                    <div class="contact-info-card bg-[#F9FBF8] rounded-2xl p-5 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#E8B923]/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone-alt text-[#E8B923] text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">CALL US</p>
+                            <a href="tel:0793662118" class="text-lg font-medium text-gray-800 hover:text-[#E8B923] transition">+256 (0) 793 662 118</a><br />
+                            <a href="tel:0758778942" class="text-lg font-medium text-gray-800 hover:text-[#E8B923] transition">+256 (0) 758 778 942</a><br />
+                            <a href="tel:0776551385" class="text-lg font-medium text-gray-800 hover:text-[#E8B923] transition">+256 (0) 776 551 385</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card bg-[#F9FBF8] rounded-2xl p-5 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#E8B923]/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-[#E8B923] text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">EMAIL US</p>
+                            <a href="mailto:info@altrin.org" class="text-lg font-medium text-gray-800 hover:text-[#E8B923] transition">info@altrin.org</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card bg-[#F9FBF8] rounded-2xl p-5 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#E8B923]/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-[#E8B923] text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">VISIT US</p>
+                            <p class="text-lg font-medium text-gray-800">Biiso Town Council, Buliisa</p>
+                            <p class="text-gray-500 text-sm">Biiso - Buliisa Highway</p>
+                            <p class="text-gray-500 text-sm">P.O. Box 490569, Hoima (U)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card bg-[#F9FBF8] rounded-2xl p-5 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#E8B923]/10 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-[#E8B923] text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">WORKING HOURS</p>
+                            <p class="text-lg font-medium text-gray-800">Monday - Friday</p>
+                            <p class="text-gray-500 text-sm">8:00 AM - 5:00 PM EAT</p>
+                            <p class="text-gray-500 text-sm">Weekends by appointment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex gap-4">
+                    <a href="https://www.youtube.com/@thetransformer24" class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-youtube text-xl"></i></a>
+                    <a href="https://www.facebook.com/albeducdrive" class="w-12 h-12 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="https://x.com/i/status/2034237319016804461" class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-x-twitter text-xl"></i></a>
+                    <a href="https://www.instagram.com/thetransformer24" class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://www.linkedin.com/company/108833296" class="w-12 h-12 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-[#F9FBF8] rounded-3xl p-8 shadow-xl">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Send Us a Message</h3>
+                <p class="text-gray-500 text-sm mb-6">We'll reply within 48 hours — let's create impact together.</p>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required class="w-full border border-gray-200 rounded-xl px-5 py-3 focus:border-[#E8B923] outline-none transition-all bg-white" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required class="w-full border border-gray-200 rounded-xl px-5 py-3 focus:border-[#E8B923] outline-none transition-all bg-white" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <input type="text" id="subject" placeholder="Subject of your message" required class="w-full border border-gray-200 rounded-xl px-5 py-3 focus:border-[#E8B923] outline-none transition-all bg-white" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="msg" rows="5" placeholder="Write your message here..." required class="w-full border border-gray-200 rounded-xl px-5 py-3 focus:border-[#E8B923] outline-none transition-all bg-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#0F4C3F] hover:bg-[#1A5A4C] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 text-lg transition-all">
+                        SEND MESSAGE <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                    <p class="text-xs text-center text-gray-400">Your information will be kept confidential. We will never share your data with third parties.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== MAP ====== -->
+<section class="py-12 section-bg-soft">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Find us</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Our Location</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+            <div class="h-80 md:h-96 bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] flex items-center justify-center text-white">
+                <div class="text-center">
+                    <i class="fas fa-map-pin text-5xl text-[#E8B923] mb-3"></i>
+                    <p class="text-xl font-semibold">Biiso Town Council, Buliisa</p>
+                    <p class="text-white/70">Biiso - Buliisa Highway, P.O. Box 490569, Hoima (U)</p>
+                    <p class="text-white/50 text-sm mt-4">📍 Map location coming soon — in the meantime, feel free to contact us for directions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Questions?</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Frequently Asked Questions</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="max-w-3xl mx-auto">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How can I volunteer with ALTRIN?</span>
+                    <i class="fas fa-chevron-down text-[#E8B923] transition-transform"></i>
+                </div>
+                <div class="faq-answer">You can volunteer with ALTRIN by filling out the volunteer form on our website or contacting us directly via email or phone. We welcome volunteers with diverse skills and backgrounds.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What schools does ALTRIN work with?</span>
+                    <i class="fas fa-chevron-down text-[#E8B923] transition-transform"></i>
+                </div>
+                <div class="faq-answer">ALTRIN currently partners with 10+ schools across Buliisa District. We work with both primary and secondary schools, implementing our Learner Tracking, TaRL, Career Guidance, and Mentorship programs.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How can I partner with ALTRIN?</span>
+                    <i class="fas fa-chevron-down text-[#E8B923] transition-transform"></i>
+                </div>
+                <div class="faq-answer">We welcome partnerships with schools, local governments, NGOs, and private organizations. To explore partnership opportunities, please reach out to us via email at info@altrin.org or call us on +256 (0) 793 662 118.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What is TaRL and how does it work?</span>
+                    <i class="fas fa-chevron-down text-[#E8B923] transition-transform"></i>
+                </div>
+                <div class="faq-answer">TaRL stands for Teaching at the Right Level — a pedagogical approach that groups learners by ability rather than age. It focuses on foundational literacy and numeracy skills, with regular assessments and regrouping to ensure every child progresses.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How can I support ALTRIN financially?</span>
+                    <i class="fas fa-chevron-down text-[#E8B923] transition-transform"></i>
+                </div>
+                <div class="faq-answer">Financial contributions help us expand our programs and reach more learners. To support ALTRIN financially, please contact us directly to discuss donation options, sponsorship opportunities, or partnership arrangements.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="py-20 bg-gradient-to-r from-[#0F4C3F] to-[#1A5A4C]">
+    <div class="container mx-auto px-5 md:px-10 text-center">
+        <h2 class="heading-font text-3xl md:text-5xl font-bold text-white">Ready to Make a Difference?</h2>
+        <p class="text-white/80 text-lg max-w-2xl mx-auto mt-4">Join ALTRIN in transforming lives and building communities through education, empowerment, and sustainability.</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+            <a href="https://form.jotform.com/243394095666064" class="btn-gold px-8 py-3 rounded-full font-semibold text-gray-900 shadow-lg flex items-center gap-2"><i class="fas fa-hand-peace"></i> Volunteer With Us</a>
+            <a href="mailto:info@altrin.org" class="btn-outline-light px-8 py-3 rounded-full font-semibold text-white border-2 border-white/70 hover:bg-white/10"><i class="fas fa-envelope"></i> Email Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-[#0A2E26] text-white py-12">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-12 h-12 object-contain rounded-md" />
+                    <span class="heading-font text-xl font-bold">ALTRIN</span>
+                </div>
+                <p class="text-white/60 text-sm">Transforming lives through learner tracking, career guidance, TaRL, mentorship, parent economic empowerment, and environmental stewardship.</p>
+                <p class="text-white/40 text-xs mt-4">© 2026 ALTRIN — Transforming Lives | Building Communities</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-white/60 text-sm">
+                    <li><a href="index.html" class="hover:text-[#E8B923] transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#E8B923] transition">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-[#E8B923] transition">Programs</a></li>
+                    <li><a href="community.html" class="hover:text-[#E8B923] transition">Community</a></li>
+                    <li><a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Programs</h4>
+                <ul class="space-y-2 text-white/60 text-sm">
+                    <li>Learner Tracking</li>
+                    <li>Career Guidance</li>
+                    <li>TaRL</li>
+                    <li>Mentorship</li>
+                    <li>Climate Action</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Connect</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="https://www.youtube.com/@thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/albeducdrive" class="hover:text-[#E8B923] transition"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/i/status/2034237319016804461" class="hover:text-[#E8B923] transition"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/108833296" class="hover:text-[#E8B923] transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:info@altrin.org" class="hover:text-[#E8B923] transition"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                <p class="text-white/40 text-xs mt-4">P.O. Box 490569, Hoima (U)</p>
+                <p class="text-white/40 text-xs">Biiso Town Council, Buliisa</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ Toggle
+    function toggleFaq(element) {
+        const answer = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        answer.classList.toggle('open');
+        icon.classList.toggle('rotate-180');
+    }
+
+    // Mobile Menu
+    (function() {
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navbar = document.getElementById('navbar');
+        if (!mobileBtn || !mobileMenu) return;
+        let isMenuOpen = false;
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileBtn.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            }
+        }
+        mobileBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => { if (isMenuOpen) toggleMenu(); });
+        });
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+                toggleMenu();
+            }
+        });
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                navbar.classList.add('nav-scrolled', 'shadow-md');
+            } else {
+                navbar.classList.remove('nav-scrolled', 'shadow-md');
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && isMenuOpen) toggleMenu();
+        });
+    })();
+
+    // Contact Form
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const msg = document.getElementById('msg').value;
+        if (name && email && subject && msg) {
+            alert('Thank you for your message! We will get back to you within 48 hours.');
+            this.reset();
+        } else {
+            alert('Please fill in all required fields.');
+        }
+    });
+</script>
+</body>
+</html>

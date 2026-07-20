@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALTRIN | Programs — Transforming Lives | Building Communities</title>
+    <link rel="icon" type="image/png" href="./Resources/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .program-hero {
+            background: linear-gradient(135deg, #03211a 0%, #0d614f 55%, #03211a 100%);
+            position: relative;
+            isolation: isolate;
+        }
+        .program-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(232, 185, 35, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .program-card {
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        .program-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 45px -12px rgba(15, 76, 63, 0.15);
+        }
+        .outcome-item {
+            border-left: 3px solid #E8B923;
+            padding-left: 1rem;
+        }
+        .method-step {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .method-step .step-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: #E8B923;
+            color: #1e2a2e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="container mx-auto px-5 md:px-10 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md" />
+            <span class="heading-font text-2xl font-bold tracking-tight text-[#0F4C3F]">ALTRIN</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+            <a href="index.html" class="hover:text-[#E8B923] transition">Home</a>
+            <a href="about.html" class="hover:text-[#E8B923] transition">About</a>
+            <a href="programs.html" class="text-[#0F4C3F] font-semibold border-b-2 border-[#E8B923]">Programs</a>
+            <a href="community.html" class="hover:text-[#E8B923] transition">Community</a>
+            <a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a>
+        </div>
+        <div class="flex gap-3">
+            <a href="https://form.jotform.com/243394095666064" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Us</a>
+            <button id="mobileMenuBtn" class="block md:hidden text-2xl text-[#0F4C3F]">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md px-5 pb-5 flex flex-col gap-4 text-gray-800 font-medium border-t mt-2">
+        <a href="index.html" class="py-2 hover:text-[#E8B923] transition">Home</a>
+        <a href="about.html" class="py-2 hover:text-[#E8B923] transition">About</a>
+        <a href="programs.html" class="py-2 text-[#0F4C3F] font-semibold">Programs</a>
+        <a href="community.html" class="py-2 hover:text-[#E8B923] transition">Community</a>
+        <a href="contact.html" class="py-2 hover:text-[#E8B923] transition">Contact</a>
+        <a href="https://form.jotform.com/243394095666064" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Us</a>
+    </div>
+</nav>
+
+<!-- ====== PROGRAM HERO ====== -->
+<section class="program-hero min-h-[50vh] flex items-center pt-20 md:pt-24 relative overflow-hidden">
+    <div class="container mx-auto px-5 md:px-10 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-1.5 mb-6 text-sm font-medium">
+                <i class="fas fa-cogs text-[#E8B923]"></i>
+                <span>Our Programs</span>
+            </div>
+            <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                Our <span class="text-[#E8B923]">Flagship</span> Initiatives
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mt-6">
+                Seven interconnected programs designed to create lasting impact across education, economic empowerment, and environmental sustainability.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PROGRAM 1: LEARNER TRACKING ====== -->
+<section id="tracking" class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Program 01</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Learner Tracking Systems</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed"><strong>From P.1 Enrolment to University Graduation</strong></p>
+                <p class="text-gray-600 leading-relaxed mt-3">The Learner Tracking System is a comprehensive monitoring framework that follows each child's academic journey from the moment they enroll in Primary 1 all the way through to university graduation. This system is designed to minimize school dropout rates and improve graduation rates by tracking academic progress, attendance patterns, and at-risk indicators across key transition years.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Key Components:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Academic performance tracking across all subjects</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Attendance monitoring and early warning systems</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Transition support between primary, secondary, and tertiary levels</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Identification of at-risk learners for targeted intervention</li>
+                    </ul>
+                </div>
+                <div class="mt-6 bg-[#F9FBF8] rounded-xl p-4">
+                    <p class="text-sm text-gray-600"><strong>Outcome:</strong> 500+ learners currently being tracked across 10+ partner schools in Buliisa District.</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 text-white">
+                <i class="fas fa-chart-line text-5xl text-[#E8B923] mb-6 block"></i>
+                <h3 class="text-2xl font-bold">Methodology</h3>
+                <div class="space-y-4 mt-4">
+                    <div class="method-step">
+                        <span class="step-number">1</span>
+                        <div>
+                            <h4 class="font-semibold">Enrolment & Baseline</h4>
+                            <p class="text-white/70 text-sm">Each learner is registered with a unique identifier, capturing their demographic and academic baseline data.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number">2</span>
+                        <div>
+                            <h4 class="font-semibold">Continuous Monitoring</h4>
+                            <p class="text-white/70 text-sm">Termly assessments, attendance records, and teacher feedback are collected and analyzed.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number">3</span>
+                        <div>
+                            <h4 class="font-semibold">Intervention & Support</h4>
+                            <p class="text-white/70 text-sm">At-risk learners receive targeted support through tutoring, counseling, or parent engagement.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number">4</span>
+                        <div>
+                            <h4 class="font-semibold">Transition & Graduation</h4>
+                            <p class="text-white/70 text-sm">Learners are supported through key transition points — P.7 to S.1, S.4 to S.5, and S.6 to university.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PROGRAM 2: CAREER GUIDANCE ====== -->
+<section id="career" class="py-20 md:py-28 section-bg-soft">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Program 02</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Career Guidance & Counselling</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">Academic counselling that accelerates ambitions, helping secondary students make informed career choices through aptitude assessments, career exploration, and role-model sessions with professionals from various fields.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Program Features:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Career aptitude assessments and personality profiling</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Career exploration workshops and industry exposure visits</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Role-model sessions with professionals in diverse fields</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Post-secondary planning and scholarship guidance</li>
+                    </ul>
+                </div>
+                <div class="mt-6 bg-[#F9FBF8] rounded-xl p-4">
+                    <p class="text-sm text-gray-600"><strong>Outcome:</strong> 15+ schools have benefited from career guidance sessions, reaching 300+ secondary students annually.</p>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 bg-gradient-to-br from-[#E8B923] to-[#d4a81e] rounded-3xl p-8 text-gray-900">
+                <i class="fas fa-briefcase text-5xl text-[#0F4C3F] mb-6 block"></i>
+                <h3 class="text-2xl font-bold">Methodology</h3>
+                <div class="space-y-4 mt-4">
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">1</span>
+                        <div>
+                            <h4 class="font-semibold">Assessment</h4>
+                            <p class="text-gray-700 text-sm">Students complete aptitude tests and career interest inventories to identify strengths and preferences.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">2</span>
+                        <div>
+                            <h4 class="font-semibold">Exploration</h4>
+                            <p class="text-gray-700 text-sm">Students explore various career paths through workshops, guest speakers, and industry visits.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">3</span>
+                        <div>
+                            <h4 class="font-semibold">Mentorship</h4>
+                            <p class="text-gray-700 text-sm">Students are matched with mentors from their fields of interest for ongoing guidance and support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PROGRAM 3: TaRL ====== -->
+<section id="tarl" class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Program 03</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Teaching at the Right Level (TaRL)</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">A proven pedagogical approach that groups learners by ability rather than age, improving foundational literacy and numeracy for targeted impact. TaRL is designed to address learning gaps in under-resourced schools where students often fall behind grade-level expectations.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Key Features:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Ability-based grouping rather than age-based</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Focus on foundational literacy and numeracy skills</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Regular assessment and regrouping based on progress</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Teacher training and ongoing coaching support</li>
+                    </ul>
+                </div>
+                <div class="mt-6 bg-[#F9FBF8] rounded-xl p-4">
+                    <p class="text-sm text-gray-600"><strong>Outcome:</strong> 4,200+ learners reached in 2025 through TaRL interventions, with significant improvements in literacy and numeracy scores.</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-[#1A5A4C] to-[#0F4C3F] rounded-3xl p-8 text-white">
+                <i class="fas fa-chalkboard-user text-5xl text-[#E8B923] mb-6 block"></i>
+                <h3 class="text-2xl font-bold">Methodology</h3>
+                <div class="space-y-4 mt-4">
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">1</span>
+                        <div>
+                            <h4 class="font-semibold">Assessment</h4>
+                            <p class="text-white/70 text-sm">Learners are assessed to determine their current literacy and numeracy levels, not their grade level.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">2</span>
+                        <div>
+                            <h4 class="font-semibold">Grouping</h4>
+                            <p class="text-white/70 text-sm">Learners are grouped by ability level, allowing teachers to target instruction to specific learning needs.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">3</span>
+                        <div>
+                            <h4 class="font-semibold">Instruction</h4>
+                            <p class="text-white/70 text-sm">Teachers deliver targeted, activity-based instruction designed for each ability group.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">4</span>
+                        <div>
+                            <h4 class="font-semibold">Reassessment</h4>
+                            <p class="text-white/70 text-sm">Regular reassessment ensures learners are regrouped as they progress, celebrating growth and identifying new needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PROGRAM 4: MENTORSHIP ====== -->
+<section id="mentorship" class="py-20 md:py-28 section-bg-soft">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Program 04</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Mentorship Program</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">Connecting students to professionals through mentor-mentee relationships, career workshops, internships, and post-graduate placements. The mentorship program builds bridges between education and employment, helping young people navigate their career journeys with confidence.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Program Components:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> One-on-one mentor-mentee matching based on career interests</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Career workshops and professional development sessions</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Internship and job shadowing opportunities</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Post-graduate placement support and alumni network</li>
+                    </ul>
+                </div>
+                <div class="mt-6 bg-[#F9FBF8] rounded-xl p-4">
+                    <p class="text-sm text-gray-600"><strong>Outcome:</strong> 15+ partner schools participating in mentorship programs, with 100+ active mentor-mentee relationships.</p>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 text-white">
+                <i class="fas fa-handshake text-5xl text-[#E8B923] mb-6 block"></i>
+                <h3 class="text-2xl font-bold">Methodology</h3>
+                <div class="space-y-4 mt-4">
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">1</span>
+                        <div>
+                            <h4 class="font-semibold">Matching</h4>
+                            <p class="text-white/70 text-sm">Mentors and mentees are carefully matched based on career interests, goals, and personality.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">2</span>
+                        <div>
+                            <h4 class="font-semibold">Engagement</h4>
+                            <p class="text-white/70 text-sm">Regular mentor-mentee meetings, workshops, and career development activities.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">3</span>
+                        <div>
+                            <h4 class="font-semibold">Evaluation</h4>
+                            <p class="text-white/70 text-sm">Ongoing assessment of the mentorship impact on students' academic and career outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PROGRAM 5: CAPACITY BUILDING ====== -->
+<section id="capacity" class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Program 05</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Parents & Teachers Capacity Building</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">Teacher workshops in modern teaching techniques combined with income-generating projects for parents to meet their children's educational needs. This program recognizes that educational success requires support from both the classroom and the home.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Key Components:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Teacher training in modern teaching methodologies</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Parent workshops on financial literacy and small business management</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Income-generating project incubation and support</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Parent cooperatives and village savings and loan associations (VSLAs)</li>
+                    </ul>
+                </div>
+                <div class="mt-6 bg-[#F9FBF8] rounded-xl p-4">
+                    <p class="text-sm text-gray-600"><strong>Outcome:</strong> 20+ teachers trained in modern teaching techniques, 15+ parent income-generating projects initiated, and 3 parent cooperatives formed.</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-[#E8B923] to-[#d4a81e] rounded-3xl p-8 text-gray-900">
+                <i class="fas fa-chalkboard text-5xl text-[#0F4C3F] mb-6 block"></i>
+                <h3 class="text-2xl font-bold">Methodology</h3>
+                <div class="space-y-4 mt-4">
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">1</span>
+                        <div>
+                            <h4 class="font-semibold">Training</h4>
+                            <p class="text-gray-700 text-sm">Teachers participate in intensive workshops on TaRL, learner-centered methods, and classroom management.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">2</span>
+                        <div>
+                            <h4 class="font-semibold">Empowerment</h4>
+                            <p class="text-gray-700 text-sm">Parents receive training in financial literacy, business planning, and cooperative management.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">3</span>
+                        <div>
+                            <h4 class="font-semibold">Sustain</h4>
+                            <p class="text-gray-700 text-sm">Ongoing mentoring and support for teachers and parents to ensure long-term sustainability and impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PROGRAM 6: ENVIRONMENTAL STEWARDSHIP ====== -->
+<section id="environment" class="py-20 md:py-28 section-bg-soft">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Program 06</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Environmental Stewardship & Climate Action</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">Integrating climate education, tree planting initiatives, and sustainable practices into our community programs. We believe that a healthy environment is foundational to thriving communities and educational success.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Key Components:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Climate education integrated into school curricula</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Tree planting and reforestation campaigns</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Sustainable farming and environmental conservation practices</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Community awareness and advocacy for climate action</li>
+                    </ul>
+                </div>
+                <div class="mt-6 bg-[#F9FBF8] rounded-xl p-4">
+                    <p class="text-sm text-gray-600"><strong>Outcome:</strong> 500+ trees planted across partner schools and communities, 10+ schools with climate education programs, and growing community awareness on environmental issues.</p>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 text-white">
+                <i class="fas fa-leaf text-5xl text-[#E8B923] mb-6 block"></i>
+                <h3 class="text-2xl font-bold">Methodology</h3>
+                <div class="space-y-4 mt-4">
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">1</span>
+                        <div>
+                            <h4 class="font-semibold">Education</h4>
+                            <p class="text-white/70 text-sm">Climate education integrated into school activities and community outreach programs.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">2</span>
+                        <div>
+                            <h4 class="font-semibold">Action</h4>
+                            <p class="text-white/70 text-sm">Tree planting campaigns, clean-up drives, and sustainable practice demonstrations.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#E8B923] text-gray-900">3</span>
+                        <div>
+                            <h4 class="font-semibold">Advocacy</h4>
+                            <p class="text-white/70 text-sm">Community engagement and advocacy for environmental conservation and climate action.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== PROGRAM 7: ACADEMIC COMPETITIONS ====== -->
+<section id="competitions" class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Program 07</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Academic Competitions</h2>
+                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
+                <p class="text-gray-600 leading-relaxed">Debates, poem & essay writing to sharpen presentation, public speaking, and formal argument skills — unlocking confidence beyond textbooks. These competitions create platforms for students to showcase their talents and develop essential life skills.</p>
+                <div class="mt-6">
+                    <h4 class="font-bold text-gray-800">Key Components:</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Inter-school debating competitions</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Poem and essay writing contests</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Public speaking and presentation workshops</li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Recognition and awards for outstanding participants</li>
+                    </ul>
+                </div>
+                <div class="mt-6 bg-[#F9FBF8] rounded-xl p-4">
+                    <p class="text-sm text-gray-600"><strong>Outcome:</strong> Annual Inter-Secondary Schools Debate & Poem Launch, with hundreds of students participating each year.</p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-[#E8B923] to-[#d4a81e] rounded-3xl p-8 text-gray-900">
+                <i class="fas fa-microphone-alt text-5xl text-[#0F4C3F] mb-6 block"></i>
+                <h3 class="text-2xl font-bold">Methodology</h3>
+                <div class="space-y-4 mt-4">
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">1</span>
+                        <div>
+                            <h4 class="font-semibold">Preparation</h4>
+                            <p class="text-gray-700 text-sm">Students receive training in debate, public speaking, and writing skills through workshops and coaching.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">2</span>
+                        <div>
+                            <h4 class="font-semibold">Competition</h4>
+                            <p class="text-gray-700 text-sm">Inter-school competitions provide platforms for students to showcase their skills and learn from peers.</p>
+                        </div>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-number bg-[#0F4C3F] text-white">3</span>
+                        <div>
+                            <h4 class="font-semibold">Recognition</h4>
+                            <p class="text-gray-700 text-sm">Awards and certificates recognize excellence, motivating continued participation and skill development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="py-20 bg-gradient-to-r from-[#0F4C3F] to-[#1A5A4C]">
+    <div class="container mx-auto px-5 md:px-10 text-center">
+        <h2 class="heading-font text-3xl md:text-5xl font-bold text-white">Ready to Make an Impact?</h2>
+        <p class="text-white/80 text-lg max-w-2xl mx-auto mt-4">Join ALTRIN in transforming lives and building communities through education, empowerment, and sustainability.</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+            <a href="https://form.jotform.com/243394095666064" class="btn-gold px-8 py-3 rounded-full font-semibold text-gray-900 shadow-lg flex items-center gap-2"><i class="fas fa-hand-peace"></i> Volunteer With Us</a>
+            <a href="contact.html" class="btn-outline-light px-8 py-3 rounded-full font-semibold text-white border-2 border-white/70 hover:bg-white/10"><i class="fas fa-envelope"></i> Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="bg-[#0A2E26] text-white py-12">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4">
+                    <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-12 h-12 object-contain rounded-md" />
+                    <span class="heading-font text-xl font-bold">ALTRIN</span>
+                </div>
+                <p class="text-white/60 text-sm">Transforming lives through learner tracking, career guidance, TaRL, mentorship, parent economic empowerment, and environmental stewardship.</p>
+                <p class="text-white/40 text-xs mt-4">© 2026 ALTRIN — Transforming Lives | Building Communities</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-white/60 text-sm">
+                    <li><a href="index.html" class="hover:text-[#E8B923] transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-[#E8B923] transition">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-[#E8B923] transition">Programs</a></li>
+                    <li><a href="community.html" class="hover:text-[#E8B923] transition">Community</a></li>
+                    <li><a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Programs</h4>
+                <ul class="space-y-2 text-white/60 text-sm">
+                    <li>Learner Tracking</li>
+                    <li>Career Guidance</li>
+                    <li>TaRL</li>
+                    <li>Mentorship</li>
+                    <li>Climate Action</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Connect</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="https://www.youtube.com/@thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/albeducdrive" class="hover:text-[#E8B923] transition"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/i/status/2034237319016804461" class="hover:text-[#E8B923] transition"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/108833296" class="hover:text-[#E8B923] transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:info@altrin.org" class="hover:text-[#E8B923] transition"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                <p class="text-white/40 text-xs mt-4">P.O. Box 490569, Hoima (U)</p>
+                <p class="text-white/40 text-xs">Biiso Town Council, Buliisa</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
