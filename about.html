@@ -4,68 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ALTRIN | About Us — Transforming Lives | Building Communities</title>
+    <meta name="description" content="Learn about ALTRIN's vision, mission, core values, leadership team, safeguarding principles, and strategic horizon in the Albertine region of Uganda." />
     <link rel="icon" type="image/png" href="./Resources/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-        .about-hero {
-            background: linear-gradient(135deg, #03211a 0%, #0d614f 55%, #03211a 100%);
-            position: relative;
-            isolation: isolate;
-        }
-        .about-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 70% 30%, rgba(232, 185, 35, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .timeline-item {
-            border-left: 3px solid #E8B923;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 4px;
-            width: 13px;
-            height: 13px;
-            background: #E8B923;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            box-shadow: 0 0 0 2px #E8B923;
-        }
-        .value-card {
-            transition: all 0.3s ease;
-        }
-        .value-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
-        }
-        .section-title-underline-center::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #E8B923;
-            margin: 8px auto 0;
-            border-radius: 3px;
-        }
-    </style>
 </head>
 <body>
 
 <!-- ====== NAVBAR ====== -->
 <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-sm shadow-sm">
     <div class="container mx-auto px-5 md:px-10 flex justify-between items-center">
-        <div class="flex items-center gap-2">
+        <a href="index.html" class="flex items-center gap-2">
             <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md" />
             <span class="heading-font text-2xl font-bold tracking-tight text-[#0F4C3F]">ALTRIN</span>
-        </div>
+        </a>
         <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
             <a href="index.html" class="hover:text-[#E8B923] transition">Home</a>
             <a href="about.html" class="text-[#0F4C3F] font-semibold border-b-2 border-[#E8B923]">About</a>
@@ -74,8 +28,8 @@
             <a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a>
         </div>
         <div class="flex gap-3">
-            <a href="https://form.jotform.com/243394095666064" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Us</a>
-            <button id="mobileMenuBtn" class="block md:hidden text-2xl text-[#0F4C3F]">
+            <a href="https://form.jotform.com/243394095666064" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Us</a>
+            <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="block md:hidden text-2xl text-[#0F4C3F]">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -86,299 +40,406 @@
         <a href="programs.html" class="py-2 hover:text-[#E8B923] transition">Programs</a>
         <a href="community.html" class="py-2 hover:text-[#E8B923] transition">Community</a>
         <a href="contact.html" class="py-2 hover:text-[#E8B923] transition">Contact</a>
-        <a href="https://form.jotform.com/243394095666064" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Us</a>
+        <a href="https://form.jotform.com/243394095666064" target="_blank" rel="noopener noreferrer" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Us</a>
     </div>
 </nav>
 
 <!-- ====== ABOUT HERO ====== -->
-<section class="about-hero min-h-[60vh] flex items-center pt-20 md:pt-24 relative overflow-hidden">
-    <div class="container mx-auto px-5 md:px-10 relative z-10">
+<section class="hero-bg min-h-[50vh] flex items-center pt-24 md:pt-28 relative overflow-hidden">
+    <div class="container mx-auto px-5 md:px-10 py-12 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-1.5 mb-6 text-sm font-medium">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-6 text-sm font-medium border border-white/20">
                 <i class="fas fa-info-circle text-[#E8B923]"></i>
-                <span>About ALTRIN</span>
+                <span>About ALTRIN Initiative</span>
             </div>
-            <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-up">
-                Who We <span class="text-[#E8B923]">Are</span>
+            <h1 class="heading-font text-4xl md:text-6xl font-bold leading-tight title-anim-flip-x">
+                Our Origin, Mission & <span class="text-[#E8B923]">Governance</span>
             </h1>
-            <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mt-6">
-                The Albertine Transformation Initiative — a community-driven movement transforming lives and building communities across Uganda.
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mt-4">
+                Dedicated to empowering young minds, strengthening families, and fostering sustainable community growth in Uganda.
             </p>
-            <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <a href="#story" class="btn-gold px-8 py-3 rounded-full font-semibold text-gray-900 shadow-lg flex items-center gap-2"><i class="fas fa-book-open"></i> Our Story</a>
-                <a href="#values" class="btn-outline-light px-8 py-3 rounded-full font-semibold text-white border-2 border-white/70 hover:bg-white/10"><i class="fas fa-heart"></i> Our Values</a>
-            </div>
         </div>
     </div>
 </section>
 
-<!-- ====== OUR STORY ====== -->
-<section id="story" class="py-20 md:py-28 bg-white">
+<!-- ====== MISSION, VISION & CORE VALUES ====== -->
+<section class="py-20 bg-white">
     <div class="container mx-auto px-5 md:px-10">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <span class="text-[#E8B923] font-semibold tracking-wide text-sm uppercase flex items-center gap-2"><i class="fas fa-seedling"></i> Our roots</span>
-                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-3 text-gray-800">The ALTRIN Story</h2>
-                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
-                <p class="text-gray-600 leading-relaxed text-lg">
-                    ALTRIN was born from a simple yet powerful belief: that every child, regardless of their background, deserves a clear path from primary school to university graduation — supported by engaged parents, dedicated teachers, and a thriving community.
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-[#F9FBF8] p-8 rounded-2xl border border-gray-200 card-anim-lift-shine">
+                <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-white flex items-center justify-center text-xl font-bold mb-6">
+                    <i class="fas fa-eye text-[#E8B923]"></i>
+                </div>
+                <h3 class="heading-font text-2xl font-bold text-[#0F4C3F] mb-3 title-anim-tracking-expand">Our Vision</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    A transformed community where every learner achieves academic and professional excellence, empowered by strong families and a sustainable environment.
                 </p>
-                <p class="text-gray-600 leading-relaxed text-lg mt-4">
-                    What started as a conversation among passionate educators and community leaders in Buliisa District has grown into a movement that has impacted over 500 learners across 10+ schools. Our approach is holistic — addressing not just academic needs, but also the economic and environmental factors that shape a child's future.
+            </div>
+
+            <div class="bg-[#F9FBF8] p-8 rounded-2xl border border-gray-200 card-anim-tilt-3d">
+                <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-white flex items-center justify-center text-xl font-bold mb-6">
+                    <i class="fas fa-bullseye text-[#E8B923]"></i>
+                </div>
+                <h3 class="heading-font text-2xl font-bold text-[#0F4C3F] mb-3 title-anim-tracking-expand">Our Mission</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    To transform lives by providing learner tracking, foundational literacy & numeracy (TaRL), career guidance, mentorship, parent economic empowerment, and climate action.
                 </p>
-                <p class="text-gray-600 leading-relaxed text-lg mt-4">
-                    The name <strong>ALTRIN</strong> — short for <strong>Albertine Transformation Initiative</strong> — reflects our commitment to the Albertine region of Uganda, where we are working to unlock the full potential of our communities through education, empowerment, and environmental stewardship.
+            </div>
+
+            <div class="bg-[#F9FBF8] p-8 rounded-2xl border border-gray-200 card-anim-pulse-border">
+                <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-white flex items-center justify-center text-xl font-bold mb-6">
+                    <i class="fas fa-gem text-[#E8B923]"></i>
+                </div>
+                <h3 class="heading-font text-2xl font-bold text-[#0F4C3F] mb-3 title-anim-tracking-expand">Our Core Values</h3>
+                <ul class="text-gray-600 text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-[#E8B923]"></i> Academic & Professional Excellence</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-[#E8B923]"></i> Integrity & Accountability</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-[#E8B923]"></i> Community Empowerment</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-[#E8B923]"></i> Environmental Stewardship</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-[#E8B923]"></i> Inclusivity & Leadership</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== RICH EDITORIAL NARRATIVE: FOUNDING STORY & INSTITUTIONAL EVOLUTION ====== -->
+<section class="py-20 bg-[#F9FBF8] border-y border-gray-200">
+    <div class="container mx-auto px-5 md:px-10 max-w-5xl">
+        <div class="mb-12">
+            <span class="text-[#E8B923] font-bold text-sm uppercase tracking-widest">Foundational Genesis</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-[#0F4C3F] title-anim-slide-left">The ALTRIN Story: From Crisis Response to Sustained Impact</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6 rounded-full"></div>
+        </div>
+
+        <div class="space-y-6 text-gray-700 leading-relaxed text-base">
+            <p>
+                The Albertine Transformation Initiative (ALTRIN) was born out of an urgent community imperative in late 2021. Following more than two years of unprecedented school closures during the global COVID-19 pandemic, schools across Uganda faced an alarming surge in student dropouts, learning loss, and household economic dislocation. In Buliisa District and the surrounding Albertine region, vulnerable learners were rapidly drifting away from formal education.
+            </p>
+            <p>
+                Recognizing that temporary aid could not solve systemic educational collapse, Founding Director **Mr. Henry Busobozi** together with founding members including **Mr. David Bingi** and a team of passionate educators initiated a ground-level **Back to School Survey** in December 2021. They visited primary and secondary school directors, parents, and community leaders to evaluate school readiness, assess household financial distress, and encourage student re-enrolment.
+            </p>
+            <p>
+                What began as a localized rapid-assessment campaign quickly evolved into a structured institutional movement. The survey revealed three fundamental truths:
+            </p>
+            <ol class="list-decimal pl-6 space-y-3 font-medium text-gray-800">
+                <li><strong class="text-[#0F4C3F]">Academic dropouts are predictable and preventable</strong> if student enrolment and attendance are systematically tracked from Primary 1 to University graduation.</li>
+                <li><strong class="text-[#0F4C3F]">Child education cannot be sustained without parental financial security</strong>, requiring direct household economic empowerment programs.</li>
+                <li><strong class="text-[#0F4C3F]">Youth motivation thrives when academic learning is paired with leadership galas</strong>, debate competitions, career guidance, and environmental climate stewardship.</li>
+            </ol>
+            <p>
+                Building upon these pillars, ALTRIN formally launched its flagship **ALTRIN Week** in October 2023 at the Biiso Sub-County Community Hall, uniting schools across the region. Today, ALTRIN stands as a robust multi-sectoral initiative impacting over 500 learners, 10 partner schools, and 20 educators across Western Uganda.
+            </p>
+        </div>
+
+        <!-- Institutional Framework Highlight Box -->
+        <div class="mt-12 p-8 rounded-3xl bg-white border border-[#0F4C3F]/20 shadow-md card-anim-flip-glow">
+            <h3 class="heading-font text-2xl font-bold text-[#0F4C3F] mb-3 title-anim-tracking-expand">Our Operational & Monitoring Philosophy</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+                ALTRIN operates with total transparency, field accountability, and data-driven oversight. Every project is continuously monitored by our dedicated Monitoring, Evaluation, and Learning (MEL) department led by **Mr. Ahebwa Clinton** and MEL Officers **Mr. Asingwire Daniel** and **Ms. Namubiru Catherine**. Field data feeds directly into our program managers and compliance team, ensuring that every shilling invested produces tangible educational and community outcomes.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== FULL ORGANIZATIONAL HIERARCHY TREE ORGANOGRAM ====== -->
+<section class="py-20 md:py-28 bg-[#03211a] text-white overflow-hidden relative border-t border-[#0F4C3F]">
+    <div class="container mx-auto px-5 md:px-10 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-[#E8B923] font-bold text-sm uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full border border-white/10">Official Governance Organogram</span>
+            <h2 class="heading-font text-3xl md:text-5xl font-bold mt-4 text-white title-anim-spotlight-lift">ALTRIN Organizational Leadership</h2>
+            <p class="text-white/80 mt-3 text-sm md:text-base">
+                Our executive hierarchy tree guides strategy, program compliance, monitoring, and community outreach.
+            </p>
+            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- ORGANOGRAM TREE CONTAINER -->
+        <div class="max-w-6xl mx-auto space-y-14">
+
+            <!-- TIER 1: BOARD & FOUNDING DIRECTOR -->
+            <div class="relative text-center">
+                <span class="inline-block text-[#E8B923] text-xs font-bold font-mono uppercase tracking-widest mb-8 bg-[#E8B923]/10 px-5 py-1.5 rounded-full border border-[#E8B923]/30">Tier 1: Board & Executive Advisory</span>
+                <div class="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+                    <!-- Node 1 -->
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Henry Busobozi.jpg" alt="Henry Busobozi" />
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Henry Busobozi</h4>
+                        <span class="hierarchy-title-badge">Founding Director</span>
+                    </div>
+
+                    <!-- Node 2 -->
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Muliisa John Dosman.jpg" alt="Muliisa John Dosman" />
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Muliisa John Dosman</h4>
+                        <span class="hierarchy-title-badge">Legal Advisor</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tree-line-v"></div>
+
+            <!-- TIER 2: ADMINISTRATION & DEPARTMENTAL MANAGERS -->
+            <div class="relative text-center">
+                <span class="inline-block text-[#E8B923] text-xs font-bold font-mono uppercase tracking-widest mb-8 bg-[#E8B923]/10 px-5 py-1.5 rounded-full border border-[#E8B923]/30">Tier 2: Administration & Departmental Managers</span>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Wembabazi Kelen.jpg" alt="Wembabazi Kelen" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Wembabazi Kelen</h4>
+                        <span class="hierarchy-title-badge">Administrative Director</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Tumuhaise Jonan.jpg" alt="Tumuhaise Jonan" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Tumuhaise Jonan</h4>
+                        <span class="hierarchy-title-badge">Projects Manager</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Atugonza Doreen.jpg" alt="Atugonza Doreen" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Atugonza Doreen</h4>
+                        <span class="hierarchy-title-badge">Programs & Compliance</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Ahebwa Clinton.jpg" alt="Ahebwa Clinton" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Ahebwa Clinton</h4>
+                        <span class="hierarchy-title-badge">MEL Manager</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tree-line-v"></div>
+
+            <!-- TIER 3: PROGRAM OFFICERS & COORDINATORS -->
+            <div class="relative text-center">
+                <span class="inline-block text-[#E8B923] text-xs font-bold font-mono uppercase tracking-widest mb-8 bg-[#E8B923]/10 px-5 py-1.5 rounded-full border border-[#E8B923]/30">Tier 3: Officers & Program Coordinators</span>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Asingwire Daniel.jpg" alt="Asingwire Daniel" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Asingwire Daniel</h4>
+                        <span class="hierarchy-title-badge">MEL Officer</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Namubiru Catherine.jpg" alt="Namubiru Catherine" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Namubiru Catherine</h4>
+                        <span class="hierarchy-title-badge">MEL Officer</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Kyalisiima Goden.jpg" alt="Kyalisiima Goden" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Kyalisiima Goden</h4>
+                        <span class="hierarchy-title-badge">Projects Coordinator</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Tumwiine Alcash.jpg" alt="Tumwine Alcash" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Tumwine Alcash</h4>
+                        <span class="hierarchy-title-badge">Programs Coordinator</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Tumushabe Derrick.jpg" alt="Tumusabe Derrick" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Tumusabe Derrick</h4>
+                        <span class="hierarchy-title-badge">Membership Coordinator</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Muhumuza Aggrey.jpg" alt="Muhumuza Aggrey" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Muhumuza Aggrey</h4>
+                        <span class="hierarchy-title-badge">Fundraising Officer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tree-line-v"></div>
+
+            <!-- TIER 4: OPERATIONS & ASSISTANTS -->
+            <div class="relative text-center">
+                <span class="inline-block text-[#E8B923] text-xs font-bold font-mono uppercase tracking-widest mb-8 bg-[#E8B923]/10 px-5 py-1.5 rounded-full border border-[#E8B923]/30">Tier 4: Operations & Field Team</span>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Tuhaise Martha.jpg" alt="Tuhaise Martha" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Tuhaise Martha</h4>
+                        <span class="hierarchy-title-badge">Finance & Publicity</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Abitegeka Shakilah.jpg" alt="Abitegeka Shakilah" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Abitegeka Shakilah</h4>
+                        <span class="hierarchy-title-badge">Publicity Assistant</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Alinda Esther.jpg" alt="Alinda Esther" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Alinda Esther</h4>
+                        <span class="hierarchy-title-badge">Publicity & Gen. Sec.</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Businge Gerald.jpg" alt="Businge Gerald" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Businge Gerald</h4>
+                        <span class="hierarchy-title-badge">Sports Officer</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Komakech Victor.jpg" alt="Komakech Victor" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Komakech Victor</h4>
+                        <span class="hierarchy-title-badge">Graphics Designer</span>
+                    </div>
+                    <div class="hierarchy-node">
+                        <div class="hierarchy-avatar">
+                            <img src="./Resources/Abisobora Liz.jpg" alt="Abisobora Liz" />
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Abisobora Liz</h4>
+                        <span class="hierarchy-title-badge">Mentorship Assistant</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ====== POST-ORGANOGRAM EDITORIAL SECTION: COMPLIANCE, SAFEGUARDING & STRATEGIC HORIZON (2026-2030) ====== -->
+<section class="py-20 md:py-28 bg-[#F9FBF8] border-t border-gray-200">
+    <div class="container mx-auto px-5 md:px-10 max-w-5xl">
+        <div class="mb-12">
+            <span class="text-[#E8B923] font-bold text-sm uppercase tracking-widest bg-[#E8B923]/10 px-4 py-1.5 rounded-full">Institutional Standards & Roadmap</span>
+            <h2 class="heading-font text-3xl md:text-5xl font-bold mt-4 text-[#0F4C3F] leading-tight title-anim-rotate-in">
+                Governance Integrity, Child Safeguarding, & Strategic Horizon 2026–2030
+            </h2>
+            <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 text-gray-700 leading-relaxed text-base">
+            <!-- Safeguarding & Data Ethics -->
+            <div class="space-y-4 bg-white p-8 rounded-3xl border border-gray-200 shadow-sm card-anim-lift-shine">
+                <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-[#E8B923] flex items-center justify-center text-xl font-bold mb-4">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3 class="heading-font text-2xl font-bold text-[#0F4C3F] title-anim-skew-in">Child Safeguarding & Learner Data Ethics</h3>
+                <p>
+                    Because ALTRIN operates directly within primary and secondary school environments across Buliisa District, institutional integrity and child protection are non-negotiable pillars. Overseen by Programs & Compliance Manager **Ms. Atugonza Doreen** and Legal Advisor **Mr. Muliisa John Dosman**, our operational framework enforces strict Child Safeguarding Protocols across all field activities.
                 </p>
-                <div class="flex flex-wrap gap-4 mt-8">
-                    <div class="bg-[#F9FBF8] rounded-2xl px-6 py-4 flex items-center gap-3">
-                        <i class="fas fa-calendar-check text-[#E8B923] text-2xl"></i>
-                        <div>
-                            <p class="text-sm text-gray-500">Founded</p>
-                            <p class="font-bold text-gray-800">2021</p>
-                        </div>
-                    </div>
-                    <div class="bg-[#F9FBF8] rounded-2xl px-6 py-4 flex items-center gap-3">
-                        <i class="fas fa-map-pin text-[#E8B923] text-2xl"></i>
-                        <div>
-                            <p class="text-sm text-gray-500">Headquarters</p>
-                            <p class="font-bold text-gray-800">Biiso, Buliisa</p>
-                        </div>
-                    </div>
-                    <div class="bg-[#F9FBF8] rounded-2xl px-6 py-4 flex items-center gap-3">
-                        <i class="fas fa-users text-[#E8B923] text-2xl"></i>
-                        <div>
-                            <p class="text-sm text-gray-500">Reach</p>
-                            <p class="font-bold text-gray-800">500+ Learners</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="text-sm">
+                    All learner data collected under the **Learner Tracking System (LTS)** is encrypted and managed under strict parental consent and institutional data privacy guidelines. We ensure that student academic records, home visitation logs, and financial risk profiles are accessible exclusively to authorized MEL officers for counseling and educational support.
+                </p>
             </div>
-            <div class="relative">
-                <div class="bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 shadow-2xl">
-                    <div class="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-                        <i class="fas fa-quote-right text-[#E8B923] text-4xl mb-4 block"></i>
-                        <p class="text-white text-xl italic leading-relaxed">
-                            "We are not just building schools — we are building futures. Every child we reach is a family we strengthen, a community we uplift."
-                        </p>
-                        <p class="text-white/60 mt-6 font-medium">— ALTRIN Team</p>
-                    </div>
-                    <div class="grid grid-cols-3 gap-4 mt-6">
-                        <div class="text-center bg-white/5 rounded-xl p-4">
-                            <p class="text-3xl font-bold text-[#E8B923]">500+</p>
-                            <p class="text-white/60 text-xs">Learners</p>
-                        </div>
-                        <div class="text-center bg-white/5 rounded-xl p-4">
-                            <p class="text-3xl font-bold text-[#E8B923]">10+</p>
-                            <p class="text-white/60 text-xs">Schools</p>
-                        </div>
-                        <div class="text-center bg-white/5 rounded-xl p-4">
-                            <p class="text-3xl font-bold text-[#E8B923]">20+</p>
-                            <p class="text-white/60 text-xs">Teachers</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- ====== TIMELINE ====== -->
-<section class="py-20 md:py-28 section-bg-soft">
-    <div class="container mx-auto px-5 md:px-10">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Our journey</span>
-            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Milestones</h2>
-            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
-            <p class="text-gray-500 mt-4">A timeline of ALTRIN's growth and impact since our founding in 2021.</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="timeline-item">
-                <h4 class="text-[#E8B923] font-bold text-sm">2021</h4>
-                <h3 class="font-bold text-gray-800 text-lg">Foundation</h3>
-                <p class="text-gray-500 text-sm">ALTRIN is founded in Buliisa District with a vision to transform lives through education and community engagement. The first radio talk show on Biiso FM 98.7 creates public awareness.</p>
-            </div>
-            <div class="timeline-item">
-                <h4 class="text-[#E8B923] font-bold text-sm">2022</h4>
-                <h3 class="font-bold text-gray-800 text-lg">First Programs</h3>
-                <p class="text-gray-500 text-sm">Launch of Learner Tracking Systems and Career Guidance programs in partnership with local secondary schools. Initial outreach to 5 schools in Buliisa District.</p>
-            </div>
-            <div class="timeline-item">
-                <h4 class="text-[#E8B923] font-bold text-sm">2023</h4>
-                <h3 class="font-bold text-gray-800 text-lg">Expansion</h3>
-                <p class="text-gray-500 text-sm">TaRL and Mentorship programs introduced. First Inter-Secondary Schools Debate & Poem Launch held. Partnerships grow to 10+ schools.</p>
-            </div>
-            <div class="timeline-item">
-                <h4 class="text-[#E8B923] font-bold text-sm">2024-2025</h4>
-                <h3 class="font-bold text-gray-800 text-lg">Growth & Impact</h3>
-                <p class="text-gray-500 text-sm">Parent Economic Empowerment and Environmental Stewardship programs added. Reached 500+ learners across 10+ schools. 20+ teachers trained in TaRL methodology.</p>
+            <!-- Policy Alignment & Strategic Roadmap -->
+            <div class="space-y-4 bg-white p-8 rounded-3xl border border-gray-200 shadow-sm card-anim-tilt-3d">
+                <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-[#E8B923] flex items-center justify-center text-xl font-bold mb-4">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <h3 class="heading-font text-2xl font-bold text-[#0F4C3F] title-anim-skew-in">Strategic Expansion Roadmap (2026–2030)</h3>
+                <p>
+                    ALTRIN’s strategic plan for 2026–2030 focuses on expanding institutional capacity and broadening regional impact across Western Uganda. Guided by our Executive Leadership, our key targets include:
+                </p>
+                <ul class="space-y-2 text-sm font-medium text-gray-800">
+                    <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> <span>Expanding partner school coverage from 10+ to 35+ primary & secondary schools.</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> <span>Establishing permanent TaRL teacher training hubs in Buliisa District.</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> <span>Scaling Parent VSLA micro-loan groups to cover 1,500+ rural households.</span></li>
+                    <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> <span>Planting 50,000 indigenous trees through school eco-clubs by 2030.</span></li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- ====== VALUES ====== -->
-<section id="values" class="py-20 md:py-28 bg-white">
-    <div class="container mx-auto px-5 md:px-10">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">What guides us</span>
-            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Our Core Values</h2>
-            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
-            <p class="text-gray-500 mt-4">Six principles that drive everything we do at ALTRIN.</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="value-card bg-[#F9FBF8] rounded-2xl p-8 border border-gray-100 hover:border-[#E8B923]/30 transition-all">
-                <div class="w-14 h-14 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-5">
-                    <i class="fas fa-hand-holding-heart text-2xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Community First</h3>
-                <p class="text-gray-500 text-sm mt-2">We believe in the power of collective action. Our work is driven by and for the communities we serve. Every decision we make prioritizes the well-being and empowerment of the people we work with.</p>
-            </div>
-            <div class="value-card bg-[#F9FBF8] rounded-2xl p-8 border border-gray-100 hover:border-[#E8B923]/30 transition-all">
-                <div class="w-14 h-14 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-5">
-                    <i class="fas fa-star text-2xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Excellence</h3>
-                <p class="text-gray-500 text-sm mt-2">We strive for academic and professional excellence in everything we do — from our programs to our partnerships. We believe that quality education is the foundation of sustainable development.</p>
-            </div>
-            <div class="value-card bg-[#F9FBF8] rounded-2xl p-8 border border-gray-100 hover:border-[#E8B923]/30 transition-all">
-                <div class="w-14 h-14 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-5">
-                    <i class="fas fa-handshake text-2xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Partnership</h3>
-                <p class="text-gray-500 text-sm mt-2">We build lasting alliances with schools, local governments, and organizations to amplify our impact. We believe that collaboration is the key to creating sustainable change.</p>
-            </div>
-            <div class="value-card bg-[#F9FBF8] rounded-2xl p-8 border border-gray-100 hover:border-[#E8B923]/30 transition-all">
-                <div class="w-14 h-14 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-5">
-                    <i class="fas fa-seedling text-2xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Sustainability</h3>
-                <p class="text-gray-500 text-sm mt-2">We are committed to long-term impact through economic empowerment and environmental stewardship. We believe that true transformation requires both human and environmental sustainability.</p>
-            </div>
-            <div class="value-card bg-[#F9FBF8] rounded-2xl p-8 border border-gray-100 hover:border-[#E8B923]/30 transition-all">
-                <div class="w-14 h-14 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-5">
-                    <i class="fas fa-bullseye text-2xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Transformation</h3>
-                <p class="text-gray-500 text-sm mt-2">We are dedicated to transforming lives — not just through education, but through holistic community development. We measure our success by the positive change we create in people's lives.</p>
-            </div>
-            <div class="value-card bg-[#F9FBF8] rounded-2xl p-8 border border-gray-100 hover:border-[#E8B923]/30 transition-all">
-                <div class="w-14 h-14 rounded-full bg-[#E8B923]/10 flex items-center justify-center mb-5">
-                    <i class="fas fa-lightbulb text-2xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Innovation</h3>
-                <p class="text-gray-500 text-sm mt-2">We embrace innovative approaches like TaRL and Learner Tracking Systems to solve complex educational challenges. We are always learning, adapting, and improving our methods.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ====== TEAM ====== -->
-<section class="py-20 md:py-28 section-bg-soft">
-    <div class="container mx-auto px-5 md:px-10">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">The people behind the mission</span>
-            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Our Leadership</h2>
-            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
-            <p class="text-gray-500 mt-4">Meet the passionate individuals driving ALTRIN's vision forward.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-            <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div class="h-72 overflow-hidden">
-                    <img src="./Resources/IMG-20260402-WA0011.jpg" alt="Aggrey Muhumuza" class="w-full h-full object-cover" />
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-gray-800">Aggrey Muhumuza</h3>
-                    <p class="text-[#E8B923] font-medium text-sm">Resource Mobilization</p>
-                    <p class="text-gray-500 mt-3 text-sm">Focused on securing funding and in-kind support to sustain ALTRIN's learner tracking systems, TaRL, career guidance, and mentorship programs. With a background in community development, Aggrey brings strategic insight into resource planning and partnership building.</p>
-                    <div class="flex gap-3 mt-4">
-                        <span class="bg-[#F9FBF8] rounded-full px-3 py-1 text-xs text-gray-600">🔗 Partnerships</span>
-                        <span class="bg-[#F9FBF8] rounded-full px-3 py-1 text-xs text-gray-600">💰 Fundraising</span>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div class="h-72 overflow-hidden">
-                    <img src="./Resources/IMG-20260404-WA0000.jpg" alt="Rogers Byensi" class="w-full h-full object-cover" />
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-gray-800">Rogers Byensi</h3>
-                    <p class="text-[#E8B923] font-medium text-sm">Partnership & Resource Mobilization Lead</p>
-                    <p class="text-gray-500 mt-3 text-sm">Leads strategic partnerships and resource mobilization to drive academic excellence for primary earners, students, undergraduates, and fresh graduates. Rogers has extensive experience in community engagement and stakeholder management.</p>
-                    <div class="flex gap-3 mt-4">
-                        <span class="bg-[#F9FBF8] rounded-full px-3 py-1 text-xs text-gray-600">🤝 Strategic Alliances</span>
-                        <span class="bg-[#F9FBF8] rounded-full px-3 py-1 text-xs text-gray-600">🌍 Community Engagement</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-12">
-            <p class="text-gray-500 text-sm">Serving with ALTRIN is an opportunity to voluntarily participate in a community transformation effort towards inspiring academic and professional excellence in Buliisa District and Uganda at large.</p>
-            <a href="contact.html" class="inline-flex items-center gap-2 mt-4 bg-[#0F4C3F] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#0d614f] transition-all"><i class="fas fa-hand-peace"></i> Join Our Team</a>
-        </div>
-    </div>
-</section>
-
-<!-- ====== CTA ====== -->
-<section class="py-20 bg-gradient-to-r from-[#0F4C3F] to-[#1A5A4C]">
-    <div class="container mx-auto px-5 md:px-10 text-center">
-        <h2 class="heading-font text-3xl md:text-5xl font-bold text-white">Join the Movement</h2>
-        <p class="text-white/80 text-lg max-w-2xl mx-auto mt-4">Be part of a community-driven effort to transform lives and build communities across Uganda.</p>
-        <div class="flex flex-wrap justify-center gap-4 mt-10">
-            <a href="https://form.jotform.com/243394095666064" class="btn-gold px-8 py-3 rounded-full font-semibold text-gray-900 shadow-lg flex items-center gap-2"><i class="fas fa-hand-peace"></i> Volunteer With Us</a>
-            <a href="contact.html" class="btn-outline-light px-8 py-3 rounded-full font-semibold text-white border-2 border-white/70 hover:bg-white/10"><i class="fas fa-envelope"></i> Get in Touch</a>
+        <!-- Global Policy Alignment Banner -->
+        <div class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-[#0F4C3F] to-[#03211a] text-white border border-emerald-500/30 shadow-xl card-anim-pulse-border">
+            <h4 class="text-xl font-bold text-[#E8B923] mb-2 title-anim-pop-shadow">National & International Policy Alignment</h4>
+            <p class="text-white/90 text-sm leading-relaxed">
+                ALTRIN’s multi-sectoral model directly aligns with Uganda’s **National Development Plan (NDP III)** for Human Capital Development, the Ministry of Education & Sports primary retention framework, and the United Nations **Sustainable Development Goals (SDGs)**—specifically **SDG 4 (Quality Education)**, **SDG 1 (No Poverty)**, **SDG 8 (Decent Work)**, and **SDG 13 (Climate Action)**.
+            </p>
         </div>
     </div>
 </section>
 
 <!-- ====== FOOTER ====== -->
-<footer class="bg-[#0A2E26] text-white py-12">
+<footer class="w-full bg-[#03211a] text-white pt-16 pb-8 border-t border-[#0F4C3F]">
     <div class="container mx-auto px-5 md:px-10">
-        <div class="grid md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
             <div>
                 <div class="flex items-center gap-2 mb-4">
-                    <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-12 h-12 object-contain rounded-md" />
-                    <span class="heading-font text-xl font-bold">ALTRIN</span>
+                    <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md" />
+                    <span class="heading-font text-2xl font-bold tracking-tight text-white">ALTRIN</span>
                 </div>
-                <p class="text-white/60 text-sm">Transforming lives through learner tracking, career guidance, TaRL, mentorship, parent economic empowerment, and environmental stewardship.</p>
-                <p class="text-white/40 text-xs mt-4">© 2026 ALTRIN — Transforming Lives | Building Communities</p>
+                <p class="text-white/70 text-sm leading-relaxed mb-4">
+                    Transforming Lives | Building Communities through education, mentorship, economic empowerment, and climate action.
+                </p>
             </div>
+
             <div>
-                <h4 class="font-semibold text-white mb-3">Quick Links</h4>
-                <ul class="space-y-2 text-white/60 text-sm">
+                <h4 class="text-[#E8B923] font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-white/80">
                     <li><a href="index.html" class="hover:text-[#E8B923] transition">Home</a></li>
                     <li><a href="about.html" class="hover:text-[#E8B923] transition">About Us</a></li>
-                    <li><a href="programs.html" class="hover:text-[#E8B923] transition">Programs</a></li>
-                    <li><a href="community.html" class="hover:text-[#E8B923] transition">Community</a></li>
-                    <li><a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a></li>
+                    <li><a href="programs.html" class="hover:text-[#E8B923] transition">Our Programs</a></li>
+                    <li><a href="community.html" class="hover:text-[#E8B923] transition">Community & Events</a></li>
+                    <li><a href="contact.html" class="hover:text-[#E8B923] transition">Contact Us</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="font-semibold text-white mb-3">Programs</h4>
-                <ul class="space-y-2 text-white/60 text-sm">
-                    <li>Learner Tracking</li>
-                    <li>Career Guidance</li>
-                    <li>TaRL</li>
-                    <li>Mentorship</li>
-                    <li>Climate Action</li>
+                <h4 class="text-[#E8B923] font-bold mb-4 uppercase text-sm tracking-wider">Flagship Initiatives</h4>
+                <ul class="space-y-2 text-sm text-white/80">
+                    <li><a href="programs.html#tracking" class="hover:text-[#E8B923] transition">Learner Tracking Systems</a></li>
+                    <li><a href="programs.html#tarl" class="hover:text-[#E8B923] transition">TaRL Foundational Learning</a></li>
+                    <li><a href="programs.html#mentorship" class="hover:text-[#E8B923] transition">Career Guidance & Mentorship</a></li>
+                    <li><a href="programs.html#empowerment" class="hover:text-[#E8B923] transition">Parent Economic Empowerment</a></li>
+                    <li><a href="programs.html#climate" class="hover:text-[#E8B923] transition">Environmental Stewardship</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="font-semibold text-white mb-3">Connect</h4>
-                <div class="flex space-x-4 text-2xl">
-                    <a href="https://www.youtube.com/@thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/albeducdrive" class="hover:text-[#E8B923] transition"><i class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/i/status/2034237319016804461" class="hover:text-[#E8B923] transition"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/108833296" class="hover:text-[#E8B923] transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:info@altrin.org" class="hover:text-[#E8B923] transition"><i class="fa-regular fa-envelope"></i></a>
-                </div>
-                <p class="text-white/40 text-xs mt-4">P.O. Box 490569, Hoima (U)</p>
-                <p class="text-white/40 text-xs">Biiso Town Council, Buliisa</p>
+                <h4 class="text-[#E8B923] font-bold mb-4 uppercase text-sm tracking-wider">Get in Touch</h4>
+                <ul class="space-y-3 text-sm text-white/80">
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-map-marker-alt text-[#E8B923] mt-1"></i>
+                        <span>Buliisa District & Albertine Region, Uganda</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-phone-alt text-[#E8B923] mt-1"></i>
+                        <span>+256 (0) 793 662 118 <br />+256 (0) 758 778 942 <br />+256 (0) 776 551 385</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-envelope text-[#E8B923]"></i>
+                        <a href="mailto:info@altrin.org" class="hover:text-[#E8B923]">info@altrin.org</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-6 text-center text-xs text-white/60 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© 2026 ALTRIN (Albertine Transformation Initiative). All Rights Reserved.</p>
+            <p class="text-white/40">Transforming Lives | Building Communities</p>
         </div>
     </div>
 </footer>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

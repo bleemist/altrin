@@ -3,50 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ALTRIN | Community — Transforming Lives | Building Communities</title>
+    <title>ALTRIN | Community & Track Record — Transforming Lives</title>
+    <meta name="description" content="Explore ALTRIN's community outreach, historical milestones, moments that define us, and partnerships across Buliisa District and Uganda." />
     <link rel="icon" type="image/png" href="./Resources/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-        .community-hero {
-            background: linear-gradient(135deg, #03211a 0%, #0d614f 55%, #03211a 100%);
-            position: relative;
-            isolation: isolate;
-        }
-        .community-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 50% 40%, rgba(232, 185, 35, 0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .event-card {
-            transition: all 0.3s ease;
-        }
-        .event-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
-        }
-        .partner-logo {
-            transition: all 0.3s ease;
-        }
-        .partner-logo:hover {
-            transform: scale(1.05);
-            filter: brightness(1.05);
-        }
-    </style>
 </head>
 <body>
 
 <!-- ====== NAVBAR ====== -->
 <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-sm shadow-sm">
     <div class="container mx-auto px-5 md:px-10 flex justify-between items-center">
-        <div class="flex items-center gap-2">
+        <a href="index.html" class="flex items-center gap-2">
             <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md" />
             <span class="heading-font text-2xl font-bold tracking-tight text-[#0F4C3F]">ALTRIN</span>
-        </div>
+        </a>
         <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
             <a href="index.html" class="hover:text-[#E8B923] transition">Home</a>
             <a href="about.html" class="hover:text-[#E8B923] transition">About</a>
@@ -55,8 +28,8 @@
             <a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a>
         </div>
         <div class="flex gap-3">
-            <a href="https://form.jotform.com/243394095666064" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Us</a>
-            <button id="mobileMenuBtn" class="block md:hidden text-2xl text-[#0F4C3F]">
+            <a href="https://form.jotform.com/243394095666064" target="_blank" rel="noopener noreferrer" class="hidden md:inline-block px-5 py-2 rounded-full bg-[#0F4C3F] text-white text-sm font-semibold shadow-md hover:bg-[#0d614f] transition">Join Us</a>
+            <button id="mobileMenuBtn" aria-label="Toggle mobile menu" class="block md:hidden text-2xl text-[#0F4C3F]">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -67,318 +40,1134 @@
         <a href="programs.html" class="py-2 hover:text-[#E8B923] transition">Programs</a>
         <a href="community.html" class="py-2 text-[#0F4C3F] font-semibold">Community</a>
         <a href="contact.html" class="py-2 hover:text-[#E8B923] transition">Contact</a>
-        <a href="https://form.jotform.com/243394095666064" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Us</a>
+        <a href="https://form.jotform.com/243394095666064" target="_blank" rel="noopener noreferrer" class="bg-[#0F4C3F] text-white text-center py-2 rounded-full w-full">Join Us</a>
     </div>
 </nav>
 
-<!-- ====== COMMUNITY HERO ====== -->
-<section class="community-hero min-h-[50vh] flex items-center pt-20 md:pt-24 relative overflow-hidden">
-    <div class="container mx-auto px-5 md:px-10 relative z-10">
+<!-- ====== HERO ====== -->
+<section class="hero-bg min-h-[45vh] flex items-center pt-24 md:pt-28 relative overflow-hidden">
+    <div class="container mx-auto px-5 md:px-10 py-12 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-white">
-            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-1.5 mb-6 text-sm font-medium">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-6 text-sm font-medium border border-white/20">
                 <i class="fas fa-users text-[#E8B923]"></i>
-                <span>Our Community</span>
+                <span>Our Community & Track Record</span>
             </div>
-            <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Building <span class="text-[#E8B923]">Community</span>,<br />Creating Impact
+            <h1 class="heading-font text-4xl md:text-6xl font-bold leading-tight title-anim-skew-in">
+                Moments That <span class="text-[#E8B923]">Define</span> ALTRIN
             </h1>
-            <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mt-6">
-                ALTRIN is a community-driven initiative. We work collectively with schools, families, and local leaders to create lasting change in Buliisa District and beyond.
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mt-4">
+                Working hand-in-hand with schools, families, radio stations, and youth groups to build strong communities.
             </p>
         </div>
     </div>
 </section>
 
-<!-- ====== COMMUNITY ENGAGEMENT ====== -->
-<section class="py-20 md:py-28 bg-white">
+<!-- ====== COMMUNITY PILLARS & IMPACT FRAMEWORK ====== -->
+<section class="py-16 md:py-20 bg-white border-b border-gray-100">
     <div class="container mx-auto px-5 md:px-10">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">How we engage</span>
-            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Community Engagement Channels</h2>
-            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+        <div class="max-w-4xl mx-auto text-center mb-14">
+            <span class="text-[#E8B923] font-bold text-sm uppercase tracking-widest bg-[#E8B923]/10 px-4 py-1.5 rounded-full">Community Ecosystem</span>
+            <h2 class="heading-font text-3xl md:text-5xl font-bold mt-4 text-[#0F4C3F] title-anim-gradient-flow">
+                Grassroots Mobilization & Community Impact Framework
+            </h2>
+            <p class="text-gray-600 text-base md:text-lg mt-4 leading-relaxed max-w-3xl mx-auto">
+                True regional transformation requires more than classroom instruction. We unite local schools, civic leadership, parents, and youth into an active, collaborative ecosystem built on shared purpose and accountability.
+            </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center p-6 bg-[#F9FBF8] rounded-2xl">
-                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-radio text-3xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Radio Talks</h3>
-                <p class="text-gray-500 text-sm mt-2">Fortnightly on Tuesdays at Biiso FM 98.7. Live sessions featuring expert talks, peer support, and community announcements.</p>
-            </div>
-            <div class="text-center p-6 bg-[#F9FBF8] rounded-2xl">
-                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-hand-holding-heart text-3xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Community Events</h3>
-                <p class="text-gray-500 text-sm mt-2">Tree planting campaigns, clean-up drives, and community sensitization programs that bring people together for collective action.</p>
-            </div>
-            <div class="text-center p-6 bg-[#F9FBF8] rounded-2xl">
-                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-hands-helping text-3xl text-[#E8B923]"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800">Volunteer Network</h3>
-                <p class="text-gray-500 text-sm mt-2">Join a growing network of volunteers, mentors, and community champions working together to transform lives.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- ====== RADIO TALKS DETAIL ====== -->
-<section class="py-20 md:py-28 section-bg-soft">
-    <div class="container mx-auto px-5 md:px-10">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- 4 RELEVANT CARDS -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card 1: School & Sub-County Networks -->
+            <div class="bg-[#F9FBF8] p-7 rounded-2xl border border-gray-200 card-anim-lift-shine flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-[#E8B923] flex items-center justify-center text-xl font-bold mb-5 shadow">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 title-anim-pop-shadow">Sub-County Networks</h3>
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
+                        Direct operational partnerships with rural primary and secondary school administrations across Buliisa District to align academic tracking with local community needs.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-gray-200 text-xs font-semibold text-[#0F4C3F] flex items-center gap-1">
+                    <i class="fas fa-check-circle text-[#E8B923]"></i> 10+ Partner Institutions
+                </div>
+            </div>
+
+            <!-- Card 2: Youth Leadership -->
+            <div class="bg-[#F9FBF8] p-7 rounded-2xl border border-gray-200 card-anim-tilt-3d flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-[#E8B923] flex items-center justify-center text-xl font-bold mb-5 shadow">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 title-anim-pop-shadow">Youth Civic Expression</h3>
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
+                        Constructive platforms including inter-school debates, essay forums, and public speaking galas where students present solutions to regional socio-economic challenges.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-gray-200 text-xs font-semibold text-[#0F4C3F] flex items-center gap-1">
+                    <i class="fas fa-check-circle text-[#E8B923]"></i> Leadership & Eloquence
+                </div>
+            </div>
+
+            <!-- Card 3: Eco-Civic Action -->
+            <div class="bg-[#F9FBF8] p-7 rounded-2xl border border-gray-200 card-anim-pulse-border flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-[#E8B923] flex items-center justify-center text-xl font-bold mb-5 shadow">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 title-anim-pop-shadow">Eco-Civic Action</h3>
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
+                        Mobilizing town cleanups and environmental drives in Biiso Town, instilling civic responsibility and waste management awareness among youth and traders.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-gray-200 text-xs font-semibold text-[#0F4C3F] flex items-center gap-1">
+                    <i class="fas fa-check-circle text-[#E8B923]"></i> Clean & Green Towns
+                </div>
+            </div>
+
+            <!-- Card 4: Multi-Channel Public Dialogue -->
+            <div class="bg-[#F9FBF8] p-7 rounded-2xl border border-gray-200 card-anim-float-bounce flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-[#0F4C3F] text-[#E8B923] flex items-center justify-center text-xl font-bold mb-5 shadow">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 title-anim-pop-shadow">Transparent Dialogue</h3>
+                    <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
+                        Fortnightly broadcasts on Biiso FM Radio and digital networks bridging information gaps between district officials, parents, and community leaders.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-gray-200 text-xs font-semibold text-[#0F4C3F] flex items-center gap-1">
+                    <i class="fas fa-check-circle text-[#E8B923]"></i> Biiso FM 2:00-3:00 PM
+                </div>
+            </div>
+        </div>
+
+        <!-- TEXT RICH EDITORIAL BANNER -->
+        <div class="mt-12 p-8 rounded-3xl bg-gradient-to-r from-[#0F4C3F] to-[#03211a] text-white border border-emerald-500/30 shadow-xl card-anim-flip-glow flex flex-col md:flex-row items-center gap-6">
+            <div class="w-16 h-16 rounded-2xl bg-[#E8B923] text-[#0F4C3F] flex items-center justify-center text-3xl font-bold shrink-0">
+                <i class="fas fa-quote-left"></i>
+            </div>
             <div>
-                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Community outreach</span>
-                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Radio Talks on Biiso FM 98.7</h2>
-                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
-                <p class="text-gray-600 leading-relaxed">ALTRIN's desire is to work collectively with the community and general public to ease information access and transparency. In October 2021, we held our first radio talk show on Biiso FM 98.7 to create awareness of our existence and sensitize the general public on what impact and positive change we were about to create.</p>
-                <p class="text-gray-600 leading-relaxed mt-4">The public was enthusiastic about the new project that intended to inspire academic and professional excellence. Since then, ALTRIN has had open engagements with the community through various programs like radio announcements and advertisements about activities and programs that foster community transformation.</p>
-                <div class="mt-6">
-                    <h4 class="font-bold text-gray-800">Radio Talk Schedule:</h4>
-                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Fortnightly on Tuesdays</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Time: 7:00 PM - 8:00 PM EAT</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Station: Biiso FM 98.7</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Topics: Education, career guidance, mentorship, parent empowerment, climate action</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 text-white">
-                <div class="text-center">
-                    <i class="fas fa-podcast text-6xl text-[#E8B923] mb-4 block"></i>
-                    <h3 class="text-2xl font-bold">Tune In!</h3>
-                    <p class="text-white/70 mt-2">Join our fortnightly radio talks for expert insights, community updates, and inspiration.</p>
-                    <div class="mt-6 space-y-3">
-                        <p class="flex items-center justify-center gap-2"><i class="fas fa-calendar-alt text-[#E8B923]"></i> Fortnightly Tuesdays</p>
-                        <p class="flex items-center justify-center gap-2"><i class="fas fa-clock text-[#E8B923]"></i> 7:00 PM EAT</p>
-                        <p class="flex items-center justify-center gap-2"><i class="fas fa-radio text-[#E8B923]"></i> Biiso FM 98.7</p>
-                    </div>
-                    <a href="https://www.youtube.com/@thetransformer24" class="inline-flex items-center gap-2 mt-6 bg-[#E8B923] text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-[#d4a81e] transition-all">
-                        <i class="fab fa-youtube"></i> Watch Recordings
-                    </a>
-                </div>
+                <h4 class="text-lg font-bold text-[#E8B923] mb-1 title-anim-tracking-expand">Integrated Community Governance Philosophy</h4>
+                <p class="text-white/90 text-sm leading-relaxed">
+                    By linking educational retention directly with parental economic stability and environmental health, ALTRIN transforms community outreach from isolated events into an enduring regional movement. Every activity—from radio broadcasts to sports galas—is monitored for tangible community impact.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== EVENTS ====== -->
-<section class="py-20 md:py-28 bg-white">
+<!-- ====== HORIZONTAL GALLERY SLIDER GALA ====== -->
+<section id="gallery" class="py-16 md:py-24 bg-[#03211a] text-white overflow-hidden">
     <div class="container mx-auto px-5 md:px-10">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Upcoming & past</span>
-            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Community Events</h2>
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wider">Photo Gallery</span>
+            <h2 class="heading-font text-3xl md:text-5xl font-bold mt-2 text-white title-anim-shimmer">Moments That Define Us</h2>
             <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
-            <p class="text-gray-500 mt-4">Events that bring our community together for learning, action, and celebration.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="event-card bg-[#F9FBF8] rounded-2xl overflow-hidden border border-gray-100">
-                <div class="bg-[#0F4C3F] p-4 text-white">
-                    <span class="text-sm uppercase tracking-wider">Annual Event</span>
-                    <h3 class="text-xl font-bold mt-1">Inter-Secondary Schools Debate</h3>
-                </div>
-                <div class="p-6">
-                    <p class="text-gray-600 text-sm">An annual competition where students from secondary schools across Buliisa District compete in debate, poem recitation, and essay writing.</p>
-                    <div class="flex items-center gap-2 mt-4 text-sm text-gray-500">
-                        <i class="fas fa-calendar-alt text-[#E8B923]"></i>
-                        <span>Annually in March</span>
+
+        <div id="sliderContainer" class="relative max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-gray-900 border border-gray-800 card-anim-flip-glow">
+            <div id="sliderTrack" class="slider-track flex">
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Mr. Ahebwa Clinton , the Altrin MEL.jpg" alt="ALTRIN Day Out" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Day Out — December 2025</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Mr. Ahebwa Clinton, the ALTRIN MEL Manager leading the team through the ALTRIN Day Out program at Kaiza Hotel in Biiso Town in Decemeber, 2025.</p>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
-                        <i class="fas fa-map-pin text-[#E8B923]"></i>
-                        <span>Biiso, Buliisa</span>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Mr. Ellison Tibaingana offering.jpg" alt="Medical Career Guidance" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Medical Career Guidance — July 2025</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Mr. Ellison Tibaingana offering career guidance in the medical field to the students of Biiso War Memorial Secondary School in Biiso Town during the ALTRIN Week in July 2025.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Mr. Daniel Asingwire - the Altrin MEL.jpg" alt="Debate Awarding" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Debate & Poems Competition Awarding — July 2025</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Mr. Daniel Asingwire - the ALTRIN MEL Officer and Mr. Andama Godfrey - the ALTRIN Schools Coordinator and a teacher at Biiso War Memorial Secondary School awarding students during the Debate & Poems Competitions in July 2025 during the ALTRIN Week.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Mr. Andama Godfrey the Altrin MEL.jpg" alt="School Coordinator" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Week Launch — October 2023</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Mr. Andama Godfrey - the ALTRIN Schools Coordinator with his students of Biiso War Memorial Secondary School at the ALTRIN Week Launch in October 2023.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Student Debate Main Speakers.jpg" alt="Student Debate Speakers" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Inter-School Debate Main Speakers — October 2023</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Student Debate Main Speakers from Mukitale Development Foundation S.S, St. Francis S.S, Biiso War Memorial S.S and Kihungya Seed S.S ready for the debate competition at Biiso Sub-County Community Hall during the ALTRIN Week launch in October 2023.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Inter-schools students' audience.jpg" alt="Student Audience" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Inter-Schools Student Audience — October 2023</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Inter-schools students' audience during the ALTRIN Week launch in October, 2023 at Biiso Sub-County Community Hall.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Onenchan Denis (Righht) receiving.jpg" alt="Best Student Award" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Best Student Presentation Certificate — 2023</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Onenchan Denis (Right) receiving his certificate of Excellence from Honorable Pirwoth (the Buliisa District Education Secretary - 2021/26) as the best student in debate presentation during the ALTRIN Week Launch in 2023. In background is Mr. David Bingi - the ALTRIN Founding Member.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Altrin Founding Director - Mr. Henry Busobozi (Right) interviewing.jpg" alt="Back to School Survey" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">COVID-19 Back to School Survey — December 2021</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">ALTRIN Founding Director - Mr. Henry Busobozi (Right) interviewing Mr. Kasaija Nelson - Left (Director Homeland Pride Nursery and Primary School) during the ALTRIN Back to School Survey after 2+ years of schools closure during the COVID-19 lockdown.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Altrin Football Team.jpg" alt="ALTRIN Football Team" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Friendly Football Gala — November 2025</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">ALTRIN football team just before the friendly match with Rotaract Club of Acacia Sunset in Kyebando - Kampala in November 2025.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Mr. David Bingi in the studios.jpg" alt="Biiso FM Talkshow" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Biiso FM Radio Awareness Broadcast — October 2021</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Mr. David Bingi in the studios of Biiso FM during the radio talk show in October 2021 to create awareness about the presence of ALTRIN in the region.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/Engagement meeting between.jpg" alt="School Engagement" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Engagement Meeting with School Coordinators — July 2025</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Engagement meeting between ALTRIN and school coordinators in preparation for ALTRIN Week 2025 - July 2025.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0033.jpg" alt="Debating Award" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Honoring Student Debaters</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Celebrating student excellence during the Inter-Secondary Schools Debate & Poem Launch.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0022.jpg" alt="School Award" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">Best Debating School Certificate</h3>
+                            <p class="text-white/90 text-xs md:text-sm mt-2">Buso War Memorial Secondary School recognized for outstanding debate performance.</p>
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/1.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/10.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/11.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/12.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/2.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250709_145744.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250709_145813.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_114752.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_114839.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_115315.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_115610.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_115616.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_140734.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_140752.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_140854.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_140948.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_141212.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_141346.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_141454.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_141517.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_192149.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_192200.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_192205.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_192216.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_192302.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/20250711_192358.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0005.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0006.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0010.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0011.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0012.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0013.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0014.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0015.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0016.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0017.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0018.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0019.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0020.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0021.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0023.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0024.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0025.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0027.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0028.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0029.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0030.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0031.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0032.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0034.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0035.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0036.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0037.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0038.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4 gallery-portrait-img" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0039.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260327-WA0045.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260402-WA0011.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/IMG-20260404-WA0000.jpg" alt="ALTRIN Community Activity" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Community Activity</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/our core values.jpg" alt="ALTRIN Core Values" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Core Values</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/our mission.jpg" alt="ALTRIN Mission" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Mission</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+<div class="slider-slide flex-shrink-0 w-full relative">
+                    <div class="slide-wrapper flex flex-col items-center justify-center min-h-[500px] md:min-h-[640px] overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#0F4C3F] to-black">
+                        <img src="./Resources/our vision.jpg" alt="ALTRIN Vision" class="max-w-full max-h-[380px] object-contain rounded-lg shadow-lg mb-4" />
+                        <div class="text-center max-w-2xl px-4">
+                            <h3 class="text-xl md:text-2xl font-bold text-[#E8B923] title-anim-pop-shadow">ALTRIN Vision</h3>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="event-card bg-[#F9FBF8] rounded-2xl overflow-hidden border border-gray-100">
-                <div class="bg-[#E8B923] p-4 text-gray-900">
-                    <span class="text-sm uppercase tracking-wider">Ongoing</span>
-                    <h3 class="text-xl font-bold mt-1">Tree Planting Campaign</h3>
-                </div>
-                <div class="p-6">
-                    <p class="text-gray-600 text-sm">A community-wide tree planting initiative aimed at restoring environmental sustainability and combating climate change in Buliisa District.</p>
-                    <div class="flex items-center gap-2 mt-4 text-sm text-gray-500">
-                        <i class="fas fa-calendar-alt text-[#E8B923]"></i>
-                        <span>Ongoing (Rainy Seasons)</span>
-                    </div>
-                    <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
-                        <i class="fas fa-map-pin text-[#E8B923]"></i>
-                        <span>Various locations, Buliisa</span>
-                    </div>
-                </div>
-            </div>
-            <div class="event-card bg-[#F9FBF8] rounded-2xl overflow-hidden border border-gray-100">
-                <div class="bg-[#0F4C3F] p-4 text-white">
-                    <span class="text-sm uppercase tracking-wider">Quarterly</span>
-                    <h3 class="text-xl font-bold mt-1">Parent Empowerment Workshops</h3>
-                </div>
-                <div class="p-6">
-                    <p class="text-gray-600 text-sm">Workshops designed to equip parents with financial literacy, business management skills, and strategies to support their children's education.</p>
-                    <div class="flex items-center gap-2 mt-4 text-sm text-gray-500">
-                        <i class="fas fa-calendar-alt text-[#E8B923]"></i>
-                        <span>Quarterly</span>
-                    </div>
-                    <div class="flex items-center gap-2 mt-1 text-sm text-gray-500">
-                        <i class="fas fa-map-pin text-[#E8B923]"></i>
-                        <span>Biiso Town Council</span>
-                    </div>
-                </div>
-            </div>
+
+            <!-- Controls -->
+            <button id="prevSlide" aria-label="Previous slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/40 text-white flex items-center justify-center transition">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+            <button id="nextSlide" aria-label="Next slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/40 text-white flex items-center justify-center transition">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
+        </div>
+
+        <div class="flex justify-center gap-2 mt-6 flex-wrap">
+            <button class="slider-dot w-3 h-3 rounded-full bg-[#E8B923]" data-index="0"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="1"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="2"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="3"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="4"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="5"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="6"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="7"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="8"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="9"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="10"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="11"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="12"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="13"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="14"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="15"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="16"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="17"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="18"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="19"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="20"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="21"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="22"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="23"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="24"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="25"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="26"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="27"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="28"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="29"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="30"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="31"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="32"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="33"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="34"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="35"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="36"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="37"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="38"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="39"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="40"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="41"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="42"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="43"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="44"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="45"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="46"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="47"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="48"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="49"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="50"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="51"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="52"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="53"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="54"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="55"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="56"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="57"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="58"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="59"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="60"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="61"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="62"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="63"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="64"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="65"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="66"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="67"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="68"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="69"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="70"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="71"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="72"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-gray-600" data-index="73"></button>
+        </div>
+
+        <div class="text-center mt-4 text-xs text-white/60 font-mono">
+            Slide <span id="currentSlideNum">1</span> of <span id="totalSlidesNum">74</span>
         </div>
     </div>
 </section>
 
-<!-- ====== PARTNERS ====== -->
-<section class="py-20 md:py-28 section-bg-soft">
-    <div class="container mx-auto px-5 md:px-10">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Our partners</span>
-            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Who We Work With</h2>
+<!-- ====== RICH NARRATIVE: GRASSROOTS MOBILIZATION & COMMUNITY IMPACT ====== -->
+<section class="py-20 bg-[#F9FBF8] border-y border-gray-200">
+    <div class="container mx-auto px-5 md:px-10 max-w-5xl">
+        <div class="mb-12">
+            <span class="text-[#E8B923] font-bold text-sm uppercase tracking-widest">Community Cohesion & Voice</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-[#0F4C3F] title-anim-fade-up">Building Community Cohesion in Buliisa District</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6 rounded-full"></div>
+        </div>
+
+        <div class="space-y-6 text-gray-700 leading-relaxed text-base">
+            <p>
+                Community transformation cannot occur through top-down mandates alone; it requires deep-rooted local trust, open dialogue, and shared ownership. ALTRIN’s community outreach framework is designed to bridge the gap between educational institutions, civic leadership, and rural households across Buliisa District and the broader Albertine region.
+            </p>
+            <p>
+                Through our bi-weekly Saturday radio broadcasts on **Biiso FM Radio (2:00 PM – 3:00 PM)**, ALTRIN reaches thousands of listeners across Western Uganda. Hosted by founding members like **Mr. David Bingi**, these broadcasts serve as an open town hall where parents, teachers, and local leaders discuss critical education challenges, seasonal farming adjustments, and student retention strategies.
+            </p>
+            <p>
+                Simultaneously, our **ALTRIN Online Community Networks** connect local youth, school coordinators, and alumni into active digital support hubs, facilitating real-time resource sharing, mentorship advice, and event announcements.
+            </p>
+            <p>
+                In addition to intellectual engagement, ALTRIN mobilizes community members for practical action through organized **Community Cleanup Initiatives** in Biiso Town and local sub-counties. By working side-by-side to clear public spaces and plant trees, students and residents cultivate civic pride and environmental responsibility.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ====== MOMENTS THAT DEFINE ALTRIN — OUR TRACK RECORD TIMELINE ====== -->
+<section id="trackrecord" class="py-20 bg-white">
+    <div class="container mx-auto px-5 md:px-10 max-w-4xl">
+        <div class="text-center mb-16">
+            <span class="text-[#E8B923] font-bold text-sm uppercase tracking-wider">Historical Milestones</span>
+            <h2 class="heading-font text-3xl md:text-5xl font-bold mt-2 text-gray-800 title-anim-tracking-expand">Our Track Record</h2>
             <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
-            <p class="text-gray-500 mt-4">Collaborations that amplify our impact and extend our reach across Buliisa District and beyond.</p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
-                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
-                    <i class="fas fa-school text-2xl text-[#0F4C3F]"></i>
-                </div>
-                <h4 class="font-bold text-gray-800">10+ Schools</h4>
-                <p class="text-gray-500 text-sm">Partner schools across Buliisa District implementing ALTRIN programs.</p>
+
+        <div class="space-y-8 relative border-l-2 border-[#0F4C3F]/30 pl-6 md:pl-8 ml-4 md:ml-6">
+            <!-- Milestone 1 -->
+            <div class="relative">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-[#E8B923] border-4 border-white shadow"></div>
+                <span class="text-xs font-bold font-mono text-[#0F4C3F] bg-[#0F4C3F]/10 px-3 py-1 rounded-full uppercase">October 2021</span>
+                <h3 class="text-xl font-bold text-gray-800 mt-2 title-anim-slide-right">1. Hosted on Biiso FM Radio Broadcast</h3>
+                <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                    Hosted on Biiso FM Radio in October 2021 to create awareness about ALTRIN in the community.
+                </p>
             </div>
-            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
-                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
-                    <i class="fas fa-handshake text-2xl text-[#0F4C3F]"></i>
-                </div>
-                <h4 class="font-bold text-gray-800">Dolica SDA Development Project</h4>
-                <p class="text-gray-500 text-sm">Partnership for community outreach and radio talk programs.</p>
+
+            <!-- Milestone 2 -->
+            <div class="relative">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-[#E8B923] border-4 border-white shadow"></div>
+                <span class="text-xs font-bold font-mono text-[#0F4C3F] bg-[#0F4C3F]/10 px-3 py-1 rounded-full uppercase">December 2021</span>
+                <h3 class="text-xl font-bold text-gray-800 mt-2 title-anim-slide-right">2. COVID-19 Back to School Survey</h3>
+                <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                    Carried out a back to school survey in Dec 2021 to understand the preparedness of and encourage parents, teachers and learners towards school reopening after 2+ years of COVID-19 lockdown.
+                </p>
             </div>
-            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
-                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
-                    <i class="fas fa-university text-2xl text-[#0F4C3F]"></i>
-                </div>
-                <h4 class="font-bold text-gray-800">Local Government</h4>
-                <p class="text-gray-500 text-sm">Buliisa District Local Government supporting community development initiatives.</p>
+
+            <!-- Milestone 3 -->
+            <div class="relative">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-[#E8B923] border-4 border-white shadow"></div>
+                <span class="text-xs font-bold font-mono text-[#0F4C3F] bg-[#0F4C3F]/10 px-3 py-1 rounded-full uppercase">October 2023</span>
+                <h3 class="text-xl font-bold text-gray-800 mt-2 title-anim-slide-right">3. Launch of ALTRIN Week Sessions</h3>
+                <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                    Launched the ALTRIN week sessions in October 2023. The ALTRIN week brings together secondary schools in the region to participate in several activities and competitions like debate, poems, essay writing, football and brain-teasing games and career guidance to encourage public speaking and promote leadership skills among learners.
+                </p>
             </div>
-            <div class="partner-logo bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
-                <div class="w-16 h-16 rounded-full bg-[#E8B923]/10 flex items-center justify-center mx-auto mb-3">
-                    <i class="fas fa-people-arrows text-2xl text-[#0F4C3F]"></i>
-                </div>
-                <h4 class="font-bold text-gray-800">Community Leaders</h4>
-                <p class="text-gray-500 text-sm">Local leaders and community champions driving grassroots transformation.</p>
+
+            <!-- Milestone 4 -->
+            <div class="relative">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-[#E8B923] border-4 border-white shadow"></div>
+                <span class="text-xs font-bold font-mono text-[#0F4C3F] bg-[#0F4C3F]/10 px-3 py-1 rounded-full uppercase">November 2025</span>
+                <h3 class="text-xl font-bold text-gray-800 mt-2 title-anim-slide-right">4. Rotaract Friendly Football Gala</h3>
+                <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                    Participated in a friendly football match with Rotaract Club of Acacia Sunset in November 2025 as a team building activity.
+                </p>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="relative">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-[#E8B923] border-4 border-white shadow"></div>
+                <span class="text-xs font-bold font-mono text-[#0F4C3F] bg-[#0F4C3F]/10 px-3 py-1 rounded-full uppercase">July 2025</span>
+                <h3 class="text-xl font-bold text-gray-800 mt-2 title-anim-slide-right">5. ALTRIN Week 2025 Gala</h3>
+                <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                    Held ALTRIN week in July 2025 with career guidance, debates and football gala.
+                </p>
+            </div>
+
+            <!-- Milestone 6 -->
+            <div class="relative">
+                <div class="absolute -left-[31px] md:-left-[39px] top-1.5 w-6 h-6 rounded-full bg-[#E8B923] border-4 border-white shadow"></div>
+                <span class="text-xs font-bold font-mono text-[#0F4C3F] bg-[#0F4C3F]/10 px-3 py-1 rounded-full uppercase">December 2025</span>
+                <h3 class="text-xl font-bold text-gray-800 mt-2 title-anim-slide-right">6. ALTRIN Team Day Out</h3>
+                <p class="text-gray-600 text-sm mt-1 leading-relaxed">
+                    Held ALTRIN Day out in Dec 2025 at Kaiza Hotel in Biiso Town as a team building activity.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== VOLUNTEER ====== -->
-<section class="py-20 md:py-28 bg-white">
+<!-- ====== COMMUNITY ENGAGEMENT CHANNELS ====== -->
+<section id="events" class="py-20 bg-[#F9FBF8]">
     <div class="container mx-auto px-5 md:px-10">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Get involved</span>
-                <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800">Volunteer With ALTRIN</h2>
-                <div class="w-20 h-1 bg-[#E8B923] mt-4 mb-6"></div>
-                <p class="text-gray-600 leading-relaxed">Serving with ALTRIN is an opportunity to voluntarily participate in a community transformation effort towards inspiring academic and professional excellence in Buliisa District and Uganda at large.</p>
-                <p class="text-gray-600 leading-relaxed mt-4">We welcome volunteers, expert advisors, and community transformation enthusiasts to join our growing network of change-makers.</p>
-                <div class="mt-6">
-                    <h4 class="font-bold text-gray-800">Opportunities Available:</h4>
-                    <ul class="space-y-2 text-gray-600 text-sm mt-2">
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Mentorship and career guidance</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Teaching and tutoring support</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Community outreach and mobilization</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Resource mobilization and partnerships</li>
-                        <li class="flex items-start gap-2"><i class="fas fa-check text-[#E8B923] mt-1"></i> Environmental conservation activities</li>
-                    </ul>
-                </div>
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Grassroots Outreach</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800 title-anim-gradient-flow">Community Engagement Channels</h2>
+            <div class="w-20 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 card-anim-lift-shine">
+                <i class="fas fa-signal text-3xl text-[#0F4C3F] mb-4"></i>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 title-anim-pop-shadow">ALTRIN Online Networks</h3>
+                <p class="text-xs text-[#E8B923] font-bold uppercase mb-2">Digital Community</p>
+                <p class="text-gray-600 text-xs leading-relaxed">
+                    ALTRIN Online Community Networks providing continuous engagement, learner tracking updates, and resource sharing.
+                </p>
             </div>
-            <div class="bg-gradient-to-br from-[#0F4C3F] to-[#1A5A4C] rounded-3xl p-8 text-white text-center">
-                <i class="fas fa-hand-peace text-6xl text-[#E8B923] mb-4 block"></i>
-                <h3 class="text-2xl font-bold">Ready to Make a Difference?</h3>
-                <p class="text-white/70 mt-2">Join ALTRIN's volunteer network and be part of the transformation.</p>
-                <div class="mt-6 space-y-3">
-                    <div class="flex items-center justify-center gap-2 text-sm text-white/80">
-                        <i class="fas fa-users text-[#E8B923]"></i>
-                        <span>Join a community of change-makers</span>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 text-sm text-white/80">
-                        <i class="fas fa-graduation-cap text-[#E8B923]"></i>
-                        <span>Impact 500+ learners</span>
-                    </div>
-                    <div class="flex items-center justify-center gap-2 text-sm text-white/80">
-                        <i class="fas fa-tree text-[#E8B923]"></i>
-                        <span>Contribute to climate action</span>
-                    </div>
-                </div>
-                <a href="https://form.jotform.com/243394095666064" class="inline-flex items-center gap-2 mt-6 bg-[#E8B923] text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-[#d4a81e] transition-all">
-                    <i class="fas fa-arrow-right"></i> Join Us Today
-                </a>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 card-anim-tilt-3d">
+                <i class="fas fa-broadcast-tower text-3xl text-[#0F4C3F] mb-4"></i>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 title-anim-pop-shadow">Biiso FM Radio Broadcast</h3>
+                <p class="text-xs text-[#E8B923] font-bold uppercase mb-2">Saturday Fortnightly 2-3 PM</p>
+                <p class="text-gray-600 text-xs leading-relaxed">
+                    Interactive radio talk shows on Biiso FM discussing education retention, career choices, and parental economic empowerment.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 card-anim-pulse-border">
+                <i class="fas fa-broom text-3xl text-[#0F4C3F] mb-4"></i>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 title-anim-pop-shadow">Community Cleanups</h3>
+                <p class="text-xs text-[#E8B923] font-bold uppercase mb-2">Climate & Sanitation</p>
+                <p class="text-gray-600 text-xs leading-relaxed">
+                    Community cleanup initiatives and environmental conservation drives uniting youth and residents across Biiso Town.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 card-anim-float-bounce">
+                <i class="fas fa-trophy text-3xl text-[#0F4C3F] mb-4"></i>
+                <h3 class="text-lg font-bold text-gray-800 mb-2 title-anim-pop-shadow">ALTRIN Week</h3>
+                <p class="text-xs text-[#E8B923] font-bold uppercase mb-2">Annual Flagship Event</p>
+                <p class="text-gray-600 text-xs leading-relaxed">
+                    Inter-secondary debates, poems, essay competitions, career guidance workshops, and friendly football galas.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ====== CTA ====== -->
-<section class="py-20 bg-gradient-to-r from-[#0F4C3F] to-[#1A5A4C]">
-    <div class="container mx-auto px-5 md:px-10 text-center">
-        <h2 class="heading-font text-3xl md:text-5xl font-bold text-white">Be Part of Our Community</h2>
-        <p class="text-white/80 text-lg max-w-2xl mx-auto mt-4">Follow us on social media, tune in to our radio talks, and join our volunteer network.</p>
-        <div class="flex flex-wrap justify-center gap-4 mt-10">
-            <a href="https://www.youtube.com/@thetransformer24" class="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-youtube text-2xl text-red-500"></i> YouTube</a>
-            <a href="https://x.com/i/status/2034237319016804461" class="bg-black text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-x-twitter text-xl"></i> X (Twitter)</a>
-            <a href="https://www.instagram.com/thetransformer24/profilecard/?igsh=MWdnZTI2dmQwZjFkNA%3D%3D" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full flex items-center gap-3 transition hover:scale-105"><i class="fab fa-instagram text-xl"></i> Instagram</a>
-            <a href="contact.html" class="btn-outline-light px-8 py-3 rounded-full font-semibold text-white border-2 border-white/70 hover:bg-white/10"><i class="fas fa-envelope"></i> Contact Us</a>
+<!-- ====== PARTNERS & COLLABORATORS ====== -->
+<section class="py-20 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-5 md:px-10">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-[#E8B923] font-semibold text-sm uppercase tracking-wide">Who We Work With</span>
+            <h2 class="heading-font text-3xl md:text-4xl font-bold mt-2 text-gray-800 title-anim-bounce-in">Our Strategic Partners</h2>
+            <div class="w-16 h-1 bg-[#E8B923] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-6 rounded-xl bg-[#F9FBF8] border border-gray-200 flex flex-col items-center justify-center card-anim-lift-shine">
+                <i class="fas fa-radio text-3xl text-[#0F4C3F] mb-2"></i>
+                <span class="font-bold text-gray-800 text-sm">Biiso FM Radio</span>
+            </div>
+            <div class="p-6 rounded-xl bg-[#F9FBF8] border border-gray-200 flex flex-col items-center justify-center card-anim-lift-shine">
+                <i class="fas fa-hands-helping text-3xl text-[#0F4C3F] mb-2"></i>
+                <span class="font-bold text-gray-800 text-sm">Rotary Clubs & Rotaract</span>
+            </div>
+            <div class="p-6 rounded-xl bg-[#F9FBF8] border border-gray-200 flex flex-col items-center justify-center card-anim-lift-shine">
+                <i class="fas fa-school text-3xl text-[#0F4C3F] mb-2"></i>
+                <span class="font-bold text-gray-800 text-sm">Buliisa District Secondary Schools</span>
+            </div>
+            <div class="p-6 rounded-xl bg-[#F9FBF8] border border-gray-200 flex flex-col items-center justify-center card-anim-lift-shine">
+                <i class="fas fa-users-cog text-3xl text-[#0F4C3F] mb-2"></i>
+                <span class="font-bold text-gray-800 text-sm">Homeland Pride & Local Partners</span>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- ====== FOOTER ====== -->
-<footer class="bg-[#0A2E26] text-white py-12">
+<footer class="w-full bg-[#03211a] text-white pt-16 pb-8 border-t border-[#0F4C3F]">
     <div class="container mx-auto px-5 md:px-10">
-        <div class="grid md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
             <div>
                 <div class="flex items-center gap-2 mb-4">
-                    <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-12 h-12 object-contain rounded-md" />
-                    <span class="heading-font text-xl font-bold">ALTRIN</span>
+                    <img src="./Resources/logo.png" alt="ALTRIN Logo" class="w-10 h-10 object-contain rounded-md" />
+                    <span class="heading-font text-2xl font-bold tracking-tight text-white">ALTRIN</span>
                 </div>
-                <p class="text-white/60 text-sm">Transforming lives through learner tracking, career guidance, TaRL, mentorship, parent economic empowerment, and environmental stewardship.</p>
-                <p class="text-white/40 text-xs mt-4">© 2026 ALTRIN — Transforming Lives | Building Communities</p>
+                <p class="text-white/70 text-sm leading-relaxed mb-4">
+                    Transforming Lives | Building Communities through education, mentorship, economic empowerment, and climate action.
+                </p>
             </div>
+
             <div>
-                <h4 class="font-semibold text-white mb-3">Quick Links</h4>
-                <ul class="space-y-2 text-white/60 text-sm">
+                <h4 class="text-[#E8B923] font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-white/80">
                     <li><a href="index.html" class="hover:text-[#E8B923] transition">Home</a></li>
                     <li><a href="about.html" class="hover:text-[#E8B923] transition">About Us</a></li>
-                    <li><a href="programs.html" class="hover:text-[#E8B923] transition">Programs</a></li>
-                    <li><a href="community.html" class="hover:text-[#E8B923] transition">Community</a></li>
-                    <li><a href="contact.html" class="hover:text-[#E8B923] transition">Contact</a></li>
+                    <li><a href="programs.html" class="hover:text-[#E8B923] transition">Our Programs</a></li>
+                    <li><a href="community.html" class="hover:text-[#E8B923] transition">Community & Events</a></li>
+                    <li><a href="contact.html" class="hover:text-[#E8B923] transition">Contact Us</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="font-semibold text-white mb-3">Programs</h4>
-                <ul class="space-y-2 text-white/60 text-sm">
-                    <li>Learner Tracking</li>
-                    <li>Career Guidance</li>
-                    <li>TaRL</li>
-                    <li>Mentorship</li>
-                    <li>Climate Action</li>
+                <h4 class="text-[#E8B923] font-bold mb-4 uppercase text-sm tracking-wider">Flagship Initiatives</h4>
+                <ul class="space-y-2 text-sm text-white/80">
+                    <li><a href="programs.html#tracking" class="hover:text-[#E8B923] transition">Learner Tracking Systems</a></li>
+                    <li><a href="programs.html#tarl" class="hover:text-[#E8B923] transition">TaRL Foundational Learning</a></li>
+                    <li><a href="programs.html#mentorship" class="hover:text-[#E8B923] transition">Career Guidance & Mentorship</a></li>
+                    <li><a href="programs.html#empowerment" class="hover:text-[#E8B923] transition">Parent Economic Empowerment</a></li>
+                    <li><a href="programs.html#climate" class="hover:text-[#E8B923] transition">Environmental Stewardship</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="font-semibold text-white mb-3">Connect</h4>
-                <div class="flex space-x-4 text-2xl">
-                    <a href="https://www.youtube.com/@thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/albeducdrive" class="hover:text-[#E8B923] transition"><i class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/i/status/2034237319016804461" class="hover:text-[#E8B923] transition"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/thetransformer24" class="hover:text-[#E8B923] transition"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/108833296" class="hover:text-[#E8B923] transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:info@altrin.org" class="hover:text-[#E8B923] transition"><i class="fa-regular fa-envelope"></i></a>
-                </div>
-                <p class="text-white/40 text-xs mt-4">P.O. Box 490569, Hoima (U)</p>
-                <p class="text-white/40 text-xs">Biiso Town Council, Buliisa</p>
+                <h4 class="text-[#E8B923] font-bold mb-4 uppercase text-sm tracking-wider">Get in Touch</h4>
+                <ul class="space-y-3 text-sm text-white/80">
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-map-marker-alt text-[#E8B923] mt-1"></i>
+                        <span>Buliisa District & Albertine Region, Uganda</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-phone-alt text-[#E8B923] mt-1"></i>
+                        <span>+256 (0) 793 662 118 <br />+256 (0) 758 778 942 <br />+256 (0) 776 551 385</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-envelope text-[#E8B923]"></i>
+                        <a href="mailto:info@altrin.org" class="hover:text-[#E8B923]">info@altrin.org</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-6 text-center text-xs text-white/60 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© 2026 ALTRIN (Albertine Transformation Initiative). All Rights Reserved.</p>
+            <p class="text-white/40">Transforming Lives | Building Communities</p>
         </div>
     </div>
 </footer>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
     --primary-light: #1A5A4C;
     --accent-gold: #E8B923;
     --soft-white: #FEFCF5;
-    --charcoal: #2C2C2C;
+    --charcoal: #1E2A2E;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: #ffffff;
-    color: #1e2a2e;
+    color: var(--charcoal);
 }
 
 .heading-font {
@@ -34,85 +34,105 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 20% 40%, #053429a3 0%, transparent 80%);
+    background: radial-gradient(circle at 20% 40%, rgba(5, 52, 41, 0.6) 0%, transparent 80%);
     pointer-events: none;
 }
 
+/* ==================== KEYFRAME ANIMATIONS ==================== */
 @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
+    0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scaleIn {
-    0% { opacity: 0; transform: scale(0.92); }
+    0% { opacity: 0; transform: scale(0.95); }
     100% { opacity: 1; transform: scale(1); }
 }
 
-@keyframes slideInLeft {
-    0% { opacity: 0; transform: translateX(-35px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-    0% { opacity: 0; transform: translateX(35px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-
 @keyframes floatSoft {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
 }
 
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(232, 185, 35, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(232, 185, 35, 0.7); }
+}
+
+@keyframes shimmerLight {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(200%) rotate(25deg); }
+}
+
+@keyframes bounceSubtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* ==================== ANIMATION UTILITY CLASSES ==================== */
 .animate-fade-up {
-    animation: fadeUp 2s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    animation: fadeUp 1.2s cubic-bezier(0.2, 0.9, 0.4, 1) forwards;
 }
 
 .animate-scale-in {
-    animation: scaleIn 1.4s ease-out forwards;
-}
-
-.animate-slide-left {
-    animation: slideInLeft 1.4s ease forwards;
-}
-
-.animate-slide-right {
-    animation: slideInRight 1.4s ease forwards;
+    animation: scaleIn 1s ease-out forwards;
 }
 
 .float-element {
     animation: floatSoft 4s ease-in-out infinite;
 }
 
-.stagger-item {
-    opacity: 100;
+.bounce-subtle {
+    animation: bounceSubtle 2.5s ease-in-out infinite;
 }
 
-.section-accent-left:after {
+.pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom Navigation */
+.nav-scrolled {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ==================== CARD HOVER & SHINE ANIMATIONS ==================== */
+.card-lift {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-lift::after {
     content: '';
     position: absolute;
-    bottom: -12px;
-    left: 0;
-    width: 64px;
-    height: 3px;
-    background: var(--accent-gold);
-    border-radius: 3px;
-}
-
-.nav-scrolled {
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-}
-
-.card-lift {
-    transition: all 1.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.25) 50%,
+        transparent 70%
+    );
+    transform: translateX(-100%) rotate(25deg);
+    transition: transform 0.8s ease;
+    pointer-events: none;
 }
 
 .card-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 35px -12px rgba(15, 76, 63, 0.15);
+    transform: translateY(-8px) scale(1.015);
+    box-shadow: 0 25px 40px -12px rgba(15, 76, 63, 0.22);
+    border-color: rgba(15, 76, 63, 0.4);
 }
 
+.card-lift:hover::after {
+    transform: translateX(100%) rotate(25deg);
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -124,256 +144,546 @@ body {
     border-radius: 8px;
 }
 
+/* Buttons */
 .btn-gold {
     background: var(--accent-gold);
     color: #1e2a2e;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
 .btn-gold:hover {
     background: #d4a81e;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(232,185,35,0.25);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(15, 76, 63, 0.25);
 }
+
 .btn-outline-light {
-    border: 1.5px solid rgba(255,255,255,0.7);
-    transition: all 0.2s ease;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
 }
 .btn-outline-light:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-color: white;
-}
-.section-bg-soft {
-    background-color: #F9FBF8;
+    transform: translateY(-2px);
 }
 
-/* Team Grid */
-.team-grid {
-display: flex;
-flex-wrap: wrap;
-gap: 2rem;
-justify-content: center;
-margin: 0;
-padding: 2rem;
-}
-
-/* Individual Card */
-.team-card {
-background: #0A2E26;
-backdrop-filter: blur(12px);
-border-radius: 1rem;
-overflow: hidden;
-box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 255, 136, 0.1);
-transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-flex: 1;
-min-width: 280px;
-max-width: 500px;
-border: 1px solid rgba(0, 255, 136, 0.15);
-}
-
-.team-card:hover {
-transform: translateY(-8px) scale(1.01);
-box-shadow: 0 35px 55px -15px rgba(0, 255, 136, 0.25), 0 0 0 1px rgba(0, 255, 136, 0.4);
-background: #092a23;
-border-color: rgba(0, 255, 136, 0.4);
-}
-
-/* Card Image Wrapper */
-.card-image {
-width: 100%;
-background: linear-gradient(135deg, #d06903, #0a0f08);
-display: flex;
-justify-content: center;
-align-items: center;
-border-bottom: 1px solid rgba(0, 255, 136, 0.2);
-position: relative;
-}
-
-.card-image::after {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 2px;
-background: linear-gradient(90deg, transparent, #ff8c00, #ff6a00, transparent);
-}
-
-.card-image img {
-width: 100%;
-height: auto;
-object-fit: cover;
-display: block;
-filter: brightness(0.95) contrast(1.05);
-transition: filter 0.3s ease;
-}
-
-.team-card:hover .card-image img {
-filter: brightness(1.02) contrast(1.08);
-}
-
-/* Card Content */
-.card-content {
-padding: 2rem;
-}
-
-.card-content h3 {
-font-size: 1.7rem;
-font-weight: 600;
-margin: 0 0 0.3rem;
-background: linear-gradient(135deg, #ff9500, #e0e6e2);
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-letter-spacing: -0.3px;
-}
-
-.role {
-font-size: 0.75rem;
-font-weight: 500;
-text-transform: uppercase;
-letter-spacing: 2px;
-color: #ffffffcf;
-margin-bottom: 1rem;
-opacity: 0.9;
-font-family: 'Inter', monospace;
-}
-
-.quote {
-font-style: normal;
-color: rgba(255, 255, 255, 0.799);
-font-size: 0.85rem;
-border-left: 2px solid #ff9500;
-padding-left: 0.9rem;
-margin: 1rem 0;
-font-weight: 400;
-letter-spacing: -0.2px;
-}
-
-.bio {
-color: rgb(255, 255, 255);
-font-size: 0.9rem;
-line-height: 1.6;
-margin-top: 1rem;
-font-weight: 400;
-}
-
-/* Subtle pulse animation on cards */
-@keyframes subtlePulse {
-0% { border-color: rgba(0, 255, 136, 0.1); }
-100% { border-color: rgba(0, 255, 136, 0.2); }
-}
-
-.team-card {
-animation: subtlePulse 3s infinite alternate;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-.team-grid {
-padding: 1rem;
-gap: 1.5rem;
-}
-.card-content h3 {
-font-size: 1.4rem;
-}
-.card-content {
-padding: 1.5rem;
-}
-}
-/* PROFESSIONAL TREE PLANTING ANIMATION */
-.tree-bucket-animation {
+/* Circular Hierarchy Tree Organogram (About Page - 1.5x Scaled Profiles) */
+.hierarchy-node {
+    background: linear-gradient(145deg, #0d382f, #061d18);
+    border: 1.5px solid rgba(45, 212, 191, 0.3);
+    border-radius: 1.25rem;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
     position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.animation-container {
-    min-height: 280px;
+.hierarchy-node:hover {
+    transform: translateY(-8px) scale(1.04);
+    border-color: #2DD4BF;
+    box-shadow: 0 25px 45px rgba(15, 76, 63, 0.45);
 }
 
+.hierarchy-avatar {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.25rem;
+    border: 4px solid #1A5A4C;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    background: #03211a;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.hierarchy-node:hover .hierarchy-avatar {
+    border-color: #2DD4BF;
+    box-shadow: 0 0 25px rgba(45, 212, 191, 0.5);
+}
+
+.hierarchy-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hierarchy-node:hover .hierarchy-avatar img {
+    transform: scale(1.12);
+}
+
+.hierarchy-title-badge {
+    display: inline-block;
+    background: rgba(232, 185, 35, 0.15);
+    border: 1px solid rgba(232, 185, 35, 0.4);
+    color: var(--accent-gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.85rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.hierarchy-node:hover .hierarchy-title-badge {
+    background: var(--accent-gold);
+    color: #03211a;
+}
+
+/* Connecting Lines for Tree */
+.tree-line-v {
+    width: 2.5px;
+    height: 35px;
+    background: linear-gradient(to bottom, var(--accent-gold), rgba(232, 185, 35, 0.2));
+    margin: 0 auto;
+}
+
+/* Interactive Tree Planting Section */
 .tree {
-    font-size: 9rem;
+    font-size: 8rem;
     cursor: grab;
     user-select: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 10px 15px rgba(15, 76, 63, 0.15));
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 10px 15px rgba(15, 76, 63, 0.2));
 }
 
 .tree:active {
     cursor: grabbing;
-    transform: scale(1.08) rotate(8deg);
-}
-
-.tree.dragging {
-    opacity: 0.7;
-    transform: scale(0.95);
-}
-
-.bucket-wrapper {
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: scale(1.08) rotate(6deg);
 }
 
 .bucket-wrapper.drag-over {
-    transform: scale(1.15) translateY(-8px);
-    filter: drop-shadow(0 0 25px rgba(232, 185, 35, 0.6));
+    transform: scale(1.15) translateY(-6px);
+    filter: drop-shadow(0 0 20px rgba(232, 185, 35, 0.6));
 }
 
-.bucket {
-    font-size: 8.5rem;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 15px 20px rgba(15, 76, 63, 0.2));
-}
-
-.splash-effect {
-    font-size: 4.5rem;
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    transform: scale(0.3) translateY(20px);
-}
-
-.splash-effect.active {
-    opacity: 1;
-    transform: scale(1) translateY(-15px);
-}
-
-.success-message {
-    animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-@keyframes popIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.6) translateY(30px);
-    }
-    70% {
-        transform: scale(1.08) translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Celebration Leaves */
 .celebration-leaf {
     position: fixed;
     z-index: 1000;
     pointer-events: none;
     user-select: none;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Optional: Make leaves rotate more naturally during fall */
-.celebration-leaf {
-    animation: leafTwirl 3s linear infinite;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    animation: leafTwirl 2.8s linear infinite;
 }
 
 @keyframes leafTwirl {
     0%   { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-.celebration-leaf {
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    animation: leafTwirl 2.8s linear infinite;
+
+/* Horizontal & Quote Slider Custom Utilities */
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-.tree.dragging {
-    opacity: 0.85;
-    filter: drop-shadow(0 20px 25px rgba(15, 76, 63, 0.3));
+
+.quote-slide {
+    transition: opacity 0.5s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-answer.open {
+    max-height: 300px;
+    padding-top: 0.75rem;
+}
+
+/* Scroll reveal trigger class */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   20 DISTINCT TITLE ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+
+/* 1. Fade Up */
+@keyframes titleFadeUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.title-anim-fade-up {
+    opacity: 0;
+}
+.title-anim-fade-up.active, .title-anim-fade-up.animated {
+    animation: titleFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 2. Fade Down */
+@keyframes titleFadeDown {
+    0% { opacity: 0; transform: translateY(-35px); filter: blur(4px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.title-anim-fade-down {
+    opacity: 0;
+}
+.title-anim-fade-down.active, .title-anim-fade-down.animated {
+    animation: titleFadeDown 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Slide Right */
+@keyframes titleSlideRight {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+.title-anim-slide-right {
+    opacity: 0;
+}
+.title-anim-slide-right.active, .title-anim-slide-right.animated {
+    animation: titleSlideRight 0.9s ease-out forwards;
+}
+
+/* 4. Slide Left */
+@keyframes titleSlideLeft {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+.title-anim-slide-left {
+    opacity: 0;
+}
+.title-anim-slide-left.active, .title-anim-slide-left.animated {
+    animation: titleSlideLeft 0.9s ease-out forwards;
+}
+
+/* 5. Zoom In */
+@keyframes titleZoomIn {
+    0% { opacity: 0; transform: scale(0.82); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.title-anim-zoom-in {
+    opacity: 0;
+}
+.title-anim-zoom-in.active, .title-anim-zoom-in.animated {
+    animation: titleZoomIn 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* 6. Zoom Out */
+@keyframes titleZoomOut {
+    0% { opacity: 0; transform: scale(1.18); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.title-anim-zoom-out {
+    opacity: 0;
+}
+.title-anim-zoom-out.active, .title-anim-zoom-out.animated {
+    animation: titleZoomOut 0.85s ease-out forwards;
+}
+
+/* 7. Bounce In */
+@keyframes titleBounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.08); }
+    70% { transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.title-anim-bounce-in {
+    opacity: 0;
+}
+.title-anim-bounce-in.active, .title-anim-bounce-in.animated {
+    animation: titleBounceIn 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+/* 8. Flip X (3D Horizontal Axis) */
+@keyframes titleFlipX {
+    0% { opacity: 0; transform: perspective(600px) rotateX(-90deg); }
+    100% { opacity: 1; transform: perspective(600px) rotateX(0deg); }
+}
+.title-anim-flip-x {
+    opacity: 0;
+    backface-visibility: visible;
+}
+.title-anim-flip-x.active, .title-anim-flip-x.animated {
+    animation: titleFlipX 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* 9. Flip Y (3D Vertical Axis) */
+@keyframes titleFlipY {
+    0% { opacity: 0; transform: perspective(600px) rotateY(-90deg); }
+    100% { opacity: 1; transform: perspective(600px) rotateY(0deg); }
+}
+.title-anim-flip-y {
+    opacity: 0;
+    backface-visibility: visible;
+}
+.title-anim-flip-y.active, .title-anim-flip-y.animated {
+    animation: titleFlipY 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* 10. Shimmer Gold Sheen */
+@keyframes titleShimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+.title-anim-shimmer {
+    background: linear-gradient(90deg, #0F4C3F 0%, #E8B923 50%, #0F4C3F 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+}
+.title-anim-shimmer.active, .title-anim-shimmer.animated {
+    animation: titleShimmer 3.5s linear infinite;
+}
+
+/* 11. Gradient Flow */
+@keyframes titleGradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.title-anim-gradient-flow {
+    background: linear-gradient(270deg, #E8B923, #1A5A4C, #F3D068, #0F4C3F);
+    background-size: 300% 300%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+}
+.title-anim-gradient-flow.active, .title-anim-gradient-flow.animated {
+    animation: titleGradientFlow 5s ease infinite;
+}
+
+/* 12. Glow Pulse */
+@keyframes titleGlowPulse {
+    0%, 100% { text-shadow: 0 0 10px rgba(232, 185, 35, 0.4), 0 0 20px rgba(232, 185, 35, 0.2); }
+    50% { text-shadow: 0 0 25px rgba(232, 185, 35, 0.85), 0 0 40px rgba(232, 185, 35, 0.6); }
+}
+.title-anim-glow-pulse {
+    transition: text-shadow 0.3s ease;
+}
+.title-anim-glow-pulse.active, .title-anim-glow-pulse.animated {
+    animation: titleGlowPulse 2.8s ease-in-out infinite;
+}
+
+/* 13. Tracking Expand */
+@keyframes titleTrackingExpand {
+    0% { opacity: 0; letter-spacing: -0.05em; transform: translateY(15px); }
+    100% { opacity: 1; letter-spacing: 0.05em; transform: translateY(0); }
+}
+.title-anim-tracking-expand {
+    opacity: 0;
+}
+.title-anim-tracking-expand.active, .title-anim-tracking-expand.animated {
+    animation: titleTrackingExpand 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* 14. Skew In */
+@keyframes titleSkewIn {
+    0% { opacity: 0; transform: skewX(-20deg) translateY(30px); }
+    100% { opacity: 1; transform: skewX(0deg) translateY(0); }
+}
+.title-anim-skew-in {
+    opacity: 0;
+}
+.title-anim-skew-in.active, .title-anim-skew-in.animated {
+    animation: titleSkewIn 0.85s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+/* 15. Rotate In */
+@keyframes titleRotateIn {
+    0% { opacity: 0; transform: rotate(-8deg) scale(0.92) translateY(20px); }
+    100% { opacity: 1; transform: rotate(0deg) scale(1) translateY(0); }
+}
+.title-anim-rotate-in {
+    opacity: 0;
+}
+.title-anim-rotate-in.active, .title-anim-rotate-in.animated {
+    animation: titleRotateIn 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* 16. Blur In */
+@keyframes titleBlurIn {
+    0% { opacity: 0; filter: blur(14px); transform: scale(1.05); }
+    100% { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+.title-anim-blur-in {
+    opacity: 0;
+}
+.title-anim-blur-in.active, .title-anim-blur-in.animated {
+    animation: titleBlurIn 0.95s ease-out forwards;
+}
+
+/* 17. Float Wave */
+@keyframes titleFloatWave {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-7px) rotate(1deg); }
+}
+.title-anim-float-wave {
+    display: inline-block;
+}
+.title-anim-float-wave.active, .title-anim-float-wave.animated {
+    animation: titleFloatWave 3.5s ease-in-out infinite;
+}
+
+/* 18. Pop Shadow */
+@keyframes titlePopShadow {
+    0% { opacity: 0; transform: translateY(20px); text-shadow: 0 0 0 rgba(15,76,63,0); }
+    100% { opacity: 1; transform: translateY(0); text-shadow: 3px 5px 12px rgba(15,76,63,0.35); }
+}
+.title-anim-pop-shadow {
+    opacity: 0;
+}
+.title-anim-pop-shadow.active, .title-anim-pop-shadow.animated {
+    animation: titlePopShadow 0.85s ease-out forwards;
+}
+
+/* 19. Underline Draw */
+.title-anim-underline-draw {
+    position: relative;
+    display: inline-block;
+}
+.title-anim-underline-draw::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 3.5px;
+    background: linear-gradient(90deg, #E8B923, #0F4C3F);
+    border-radius: 99px;
+    transition: width 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.title-anim-underline-draw.active::after, .title-anim-underline-draw.animated::after {
+    width: 100%;
+}
+
+/* 20. Spotlight Lift */
+@keyframes titleSpotlightLift {
+    0% { opacity: 0; transform: perspective(800px) translateZ(-60px) translateY(30px); }
+    100% { opacity: 1; transform: perspective(800px) translateZ(0) translateY(0); }
+}
+.title-anim-spotlight-lift {
+    opacity: 0;
+    position: relative;
+}
+.title-anim-spotlight-lift.active, .title-anim-spotlight-lift.animated {
+    animation: titleSpotlightLift 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+/* ==========================================================================
+   5 DISTINCT CARD ANIMATIONS & INTERACTION STYLES
+   ========================================================================== */
+
+/* Card Style 1: Lift & Sheen (Elevation lift with crisp silver-pearl sheen sweep on hover) */
+.card-anim-lift-shine {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card-anim-lift-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+    transform: translateX(-100%) rotate(25deg);
+    transition: transform 0.8s ease;
+    pointer-events: none;
+}
+.card-anim-lift-shine:hover {
+    transform: translateY(-9px) scale(1.02);
+    box-shadow: 0 25px 45px -10px rgba(15, 76, 63, 0.25);
+    border-color: rgba(15, 76, 63, 0.5);
+}
+.card-anim-lift-shine:hover::after {
+    transform: translateX(100%) rotate(25deg);
+}
+
+/* Card Style 2: 3D Depth Tilt (Perspective 3D lift with deep shadow & mint teal border) */
+.card-anim-tilt-3d {
+    perspective: 1000px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.card-anim-tilt-3d:hover {
+    transform: perspective(1000px) rotateX(4deg) rotateY(-3deg) translateZ(12px) translateY(-8px);
+    box-shadow: -10px 25px 40px rgba(15, 76, 63, 0.22);
+    border-color: rgba(45, 212, 191, 0.5);
+}
+
+/* Card Style 3: Pulse Border (Animated border glow cycling deep forest green & mint teal) */
+@keyframes borderPulseGradient {
+    0%, 100% { border-color: rgba(15, 76, 63, 0.6); box-shadow: 0 0 12px rgba(15, 76, 63, 0.2); }
+    50% { border-color: rgba(45, 212, 191, 0.85); box-shadow: 0 0 20px rgba(45, 212, 191, 0.35); }
+}
+.card-anim-pulse-border {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-anim-pulse-border:hover {
+    transform: translateY(-6px) scale(1.015);
+    animation: borderPulseGradient 2.2s infinite ease-in-out;
+}
+
+/* Card Style 4: Float Bounce (Gentle floating bobbing effect with spring hover) */
+@keyframes cardFloatBob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+.card-anim-float-bounce {
+    animation: cardFloatBob 4s ease-in-out infinite;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+.card-anim-float-bounce:hover {
+    animation-play-state: paused;
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 35px rgba(15, 76, 63, 0.2);
+}
+
+/* Card Style 5: Flip & Ambient Glow (Glassmorphic depth pop with ambient forest emerald glow) */
+.card-anim-flip-glow {
+    transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+}
+.card-anim-flip-glow:hover {
+    transform: translateY(-8px) scale(1.025) rotate(0.5deg);
+    box-shadow: 0 0 30px rgba(15, 76, 63, 0.35), 0 20px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(15, 76, 63, 0.6);
+}
+
+
+
+/* ==================== GALLERY PORTRAIT ZOOM ENHANCEMENTS ==================== */
+.gallery-portrait-img {
+    max-height: 480px !important;
+    width: auto !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    transform: scale(1.35);
+    border-radius: 0.85rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-portrait-img:hover {
+    transform: scale(1.42);
+}
+
+@media (min-width: 768px) {
+    .gallery-portrait-img {
+        max-height: 560px !important;
+        transform: scale(1.45);
+    }
+    .gallery-portrait-img:hover {
+        transform: scale(1.52);
+    }
 }
